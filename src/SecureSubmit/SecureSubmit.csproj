@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6453668C-6ED8-4625-B28C-89C540B75C3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SecureSubmit</RootNamespace>
+    <AssemblyName>SecureSubmit</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstractions\IHpsServicesConfig.cs" />
+    <Compile Include="Abstractions\IHpsTransaction.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Common Data\clsPOSDBConstants.cs" />
+    <Compile Include="Entities\Attachment\HpsAttachment.cs" />
+    <Compile Include="Entities\Batch\HpsBatch.cs" />
+    <Compile Include="Entities\Check\HpsCheck.cs" />
+    <Compile Include="Entities\Check\HpsCheckHolder.cs" />
+    <Compile Include="Entities\Check\HpsCheckResponse.cs" />
+    <Compile Include="Entities\Check\HpsCheckResponseDetails.cs" />
+    <Compile Include="Entities\Credit\HpsAccountVerify.cs" />
+    <Compile Include="Entities\Credit\HpsAdditionalAmount.cs" />
+    <Compile Include="Entities\Credit\HpsAdditionalTransactionFields.cs" />
+    <Compile Include="Entities\Credit\HpsAmountDetails.cs" />
+    <Compile Include="Entities\Credit\HpsAutoSubstantiation.cs" />
+    <Compile Include="Entities\Credit\HpsCardHolder.cs" />
+    <Compile Include="Entities\Credit\HpsCharge.cs" />
+    <Compile Include="Entities\Credit\HpsChargeExceptions.cs" />
+    <Compile Include="Entities\Credit\HpsCpcData.cs" />
+    <Compile Include="Entities\Credit\HpsCreditCard.cs" />
+    <Compile Include="Entities\Credit\HpsRefund.cs" />
+    <Compile Include="Entities\Credit\HpsReportTransactionDetails.cs" />
+    <Compile Include="Entities\Credit\HpsReportTransactionSummary.cs" />
+    <Compile Include="Entities\Credit\HpsReversal.cs" />
+    <Compile Include="Entities\Credit\HpsSecureEcommerce.cs" />
+    <Compile Include="Entities\Credit\HpsTxnReferenceData.cs" />
+    <Compile Include="Entities\Debit\HpsDebitAuthorization.cs" />
+    <Compile Include="Entities\Ebt\HpsEbtAuthorization.cs" />
+    <Compile Include="Entities\Gift\HpsGiftCard.cs" />
+    <Compile Include="Entities\Gift\HpsGiftCardAlias.cs" />
+    <Compile Include="Entities\Gift\HpsGiftCardResponse.cs" />
+    <Compile Include="Entities\Gift\HpsGiftCardSale.cs" />
+    <Compile Include="Entities\HpsAddress.cs" />
+    <Compile Include="Entities\HpsAuthorization.cs" />
+    <Compile Include="Entities\HpsConsumer.cs" />
+    <Compile Include="Entities\HpsDirectMarketData.cs" />
+    <Compile Include="Entities\HpsEncryptionData.cs" />
+    <Compile Include="Entities\HpsRecurringData.cs" />
+    <Compile Include="Entities\HpsTagDataType.cs" />
+    <Compile Include="Entities\HpsTokenData.cs" />
+    <Compile Include="Entities\HpsTrackData.cs" />
+    <Compile Include="Entities\HpsTransaction.cs" />
+    <Compile Include="Entities\HpsTransactionDetails.cs" />
+    <Compile Include="Entities\HpsTransactionHeader.cs" />
+    <Compile Include="Entities\IHpsReportTransaction.cs" />
+    <Compile Include="Entities\PayPlan\FormatDate.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanAmount.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanCustomer.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanCustomerCollection.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanCustomerStatus.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanPaymentMethod.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanPaymentMethodCollection.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanPaymentMethodStatus.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanPaymentMethodType.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanResource.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanSchedule.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanScheduleCollection.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanScheduleDuration.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanScheduleFrequency.cs" />
+    <Compile Include="Entities\PayPlan\HpsPayPlanScheduleStatus.cs" />
+    <Compile Include="Fluent\CheckRecurringBuilder.cs" />
+    <Compile Include="Fluent\CheckSaleBuilder.cs" />
+    <Compile Include="Fluent\CheckVoidBuilder.cs" />
+    <Compile Include="Fluent\CreditAdditionalAuthBuilder.cs" />
+    <Compile Include="Fluent\CreditAddValueBuilder.cs" />
+    <Compile Include="Fluent\CreditAuthBuilder.cs" />
+    <Compile Include="Fluent\CreditBalanceInquiryBuilder.cs" />
+    <Compile Include="Fluent\CreditCaptureBuilder.cs" />
+    <Compile Include="Fluent\CreditChargeBuilder.cs" />
+    <Compile Include="Fluent\CreditCpcEditBuilder.cs" />
+    <Compile Include="Fluent\CreditEditBuilder.cs" />
+    <Compile Include="Fluent\CreditGetBuilder.cs" />
+    <Compile Include="Fluent\CreditListBuilder.cs" />
+    <Compile Include="Fluent\CreditOfflineAuthBuilder.cs" />
+    <Compile Include="Fluent\CreditOfflineChargeBuilder.cs" />
+    <Compile Include="Fluent\CreditRecurringBuilder.cs" />
+    <Compile Include="Fluent\CreditRefundBuilder.cs" />
+    <Compile Include="Fluent\CreditReverseBuilder.cs" />
+    <Compile Include="Fluent\CreditVerifyBuilder.cs" />
+    <Compile Include="Fluent\CreditVoidBuilder.cs" />
+    <Compile Include="Fluent\DebitAddValueBuilder.cs" />
+    <Compile Include="Fluent\DebitChargeBuilder.cs" />
+    <Compile Include="Fluent\DebitReturnBuilder.cs" />
+    <Compile Include="Fluent\DebitReverseBuilder.cs" />
+    <Compile Include="Fluent\EbtBalanceInquiryBuilder.cs" />
+    <Compile Include="Fluent\EbtBenefitWithdrawalBuilder.cs" />
+    <Compile Include="Fluent\EbtCashBackPurchaseBuilder.cs" />
+    <Compile Include="Fluent\EbtPurchaseBuilder.cs" />
+    <Compile Include="Fluent\EbtRefundBuilder.cs" />
+    <Compile Include="Fluent\EbtVoucherPurchaseBuilder.cs" />
+    <Compile Include="Fluent\GiftCardActivateBuilder.cs" />
+    <Compile Include="Fluent\GiftCardAddValueBuilder.cs" />
+    <Compile Include="Fluent\GiftCardAliasBuilder.cs" />
+    <Compile Include="Fluent\GiftCardBalanceBuilder.cs" />
+    <Compile Include="Fluent\GiftCardDeactivateBuilder.cs" />
+    <Compile Include="Fluent\GiftCardReplaceBuilder.cs" />
+    <Compile Include="Fluent\GiftCardReverseBuilder.cs" />
+    <Compile Include="Fluent\GiftCardRewardBuilder.cs" />
+    <Compile Include="Fluent\GiftCardSaleBuilder.cs" />
+    <Compile Include="Fluent\GiftCardVoidBuilder.cs" />
+    <Compile Include="Fluent\HpsBuilderAbstract.cs" />
+    <Compile Include="Fluent\HpsBuilderValidation.cs" />
+    <Compile Include="Fluent\Services\HpsFluentCheckService.cs" />
+    <Compile Include="Fluent\Services\HpsFluentCreditService.cs" />
+    <Compile Include="Fluent\Services\HpsFluentDebitService.cs" />
+    <Compile Include="Fluent\Services\HpsFluentEbtService.cs" />
+    <Compile Include="Fluent\Services\HpsFluentGiftCardService.cs" />
+    <Compile Include="Infrastructure\Enums.cs" />
+    <Compile Include="Infrastructure\HpsArgumentException.cs" />
+    <Compile Include="Infrastructure\HpsAuthenticationException.cs" />
+    <Compile Include="Infrastructure\HpsCheckException.cs" />
+    <Compile Include="Infrastructure\HpsConfiguration.cs" />
+    <Compile Include="Infrastructure\HpsConfigurationException.cs" />
+    <Compile Include="Infrastructure\HpsCreditException.cs" />
+    <Compile Include="Infrastructure\HpsCreditExceptionDetails.cs" />
+    <Compile Include="Infrastructure\HpsException.cs" />
+    <Compile Include="Infrastructure\HpsGatewayException.cs" />
+    <Compile Include="Infrastructure\HpsGatewayExceptionDetails.cs" />
+    <Compile Include="Infrastructure\HpsInvalidRequestException.cs" />
+    <Compile Include="Infrastructure\HpsMessageException.cs" />
+    <Compile Include="Infrastructure\PosGatewayClient.cs" />
+    <Compile Include="Infrastructure\Validation\HpsGatewayResponseValidation.cs" />
+    <Compile Include="Infrastructure\Validation\HpsInputValidation.cs" />
+    <Compile Include="Infrastructure\Validation\HpsIssuerResponseValidation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs" />
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="Serialization\HpsError.cs" />
+    <Compile Include="Serialization\HpsToken.cs" />
+    <Compile Include="Services\HpsAttachmentService.cs" />
+    <Compile Include="Services\HpsBatchService.cs" />
+    <Compile Include="Services\HpsCheckService.cs" />
+    <Compile Include="Services\HpsCreditService.cs" />
+    <Compile Include="Services\HpsDebitService.cs" />
+    <Compile Include="Services\HpsGiftCardService.cs" />
+    <Compile Include="Services\HpsPayPlanService.cs" />
+    <Compile Include="Services\HpsRestGatewayService.cs" />
+    <Compile Include="Services\HpsServicesConfig.cs" />
+    <Compile Include="Services\HpsSoapGatewayService.cs" />
+    <Compile Include="Services\HpsTokenService.cs" />
+    <Compile Include="Terminals\Abstractions\IDeviceCommInterface.cs" />
+    <Compile Include="Terminals\Abstractions\IDeviceMessage.cs" />
+    <Compile Include="Terminals\Abstractions\IDeviceResponse.cs" />
+    <Compile Include="Terminals\Abstractions\IRequestSubGroup.cs" />
+    <Compile Include="Terminals\Abstractions\IResponseSubGroup.cs" />
+    <Compile Include="Terminals\ConnectionConfig.cs" />
+    <Compile Include="Terminals\ControlCodes.cs" />
+    <Compile Include="Terminals\DeviceMessage.cs" />
+    <Compile Include="Terminals\Extensions\BinaryReaderExtensions.cs" />
+    <Compile Include="Terminals\Extensions\NetworkStreamExtensions.cs" />
+    <Compile Include="Terminals\Extensions\StringExtensions.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditAuthBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditCaptureBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditReturnBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditSaleBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditVerifyBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\CreditVoidBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\DebitReturnBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\DebitSaleBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\GiftAddValueBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\GiftBalanceBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\GiftSaleBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\GiftVoidBuilder.cs" />
+    <Compile Include="Terminals\PAX\Fluent\InputAccountBuilder.cs" />
+    <Compile Include="Terminals\PAX\Interfaces\PaxHttpInterface.cs" />
+    <Compile Include="Terminals\PAX\Interfaces\PaxTcpInterface.cs" />
+    <Compile Include="Terminals\PAX\PaxDevice.cs" />
+    <Compile Include="Terminals\PAX\PaxEnums.cs" />
+    <Compile Include="Terminals\PAX\Responses\BatchCloseResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\CashResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\CheckResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\CreditResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\DebitResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\DeviceResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\EbtResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\GiftResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\InitializeResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\InputAccountResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\LoyaltyResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\ReportResponse.cs" />
+    <Compile Include="Terminals\PAX\Responses\ResetResponse.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\AccountSubGroups.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\AmountSubGroups.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\AvsSubGroups.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\CashierSubGroup.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\CheckSubGroup.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\CommercialSubGroups.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\EcomSubGroup.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\ExtDataSubGroups.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\HostSubGroup.cs" />
+    <Compile Include="Terminals\PAX\SubGroups\TraceSubGroups.cs" />
+    <Compile Include="Terminals\TerminalResponse.cs" />
+    <Compile Include="Terminals\TerminalUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Serialization\HpsToken.cs.orig" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

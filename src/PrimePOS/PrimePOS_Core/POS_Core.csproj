@@ -1,0 +1,1483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16828A07-58A9-4E49-B29D-67D0D80F50BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POS_Core</RootNamespace>
+    <AssemblyName>POS_Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationLogger">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\ApplicationLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Core.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Excel.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.IO.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.IO.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Reports.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Reports.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Word.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Word.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Math.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Math.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Shared.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.AppStylistSupport.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.Misc.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.SupportDialogs.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.SupportDialogs.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinDock.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGanttView.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGanttView.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGauge.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGauge.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.WordWriter.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.WordWriter.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinListBar.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinListView.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AES">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.AES.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.BLOWFISHCOMLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.BLOWFISHCOMLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Device">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.Device.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EasyByte_Software">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.EasyByte_Software.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EBFilexWiperLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.EBFilexWiperLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.IWshRuntimeLibrary">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.IWshRuntimeLibrary.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.LCC11">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.LCC11.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MessengerAPI">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.MessengerAPI.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSCommLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.MSCommLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposLineDisplay_CCO">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.OposLineDisplay_CCO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.RSACOMDLLLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.RSACOMDLLLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SCRIPTIFACEENETLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SCRIPTIFACELib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACELib.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SCRIPTIFACEUSBLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VCONTROLOBJECTLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VFMXSERIESSOLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VHELPERLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VHELPERLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mabry.Barcode">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Mabry.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Mabry.Core">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Mabry.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualBasic.Vsa\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.Vsa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MMS.HOST, Version=4.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMS.HOST.dll</HintPath>
+    </Reference>
+    <Reference Include="MMSBClass, Version=5.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSBClass.dll</HintPath>
+    </Reference>
+    <Reference Include="MMSChargeAccount, Version=5.0.0.5, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSChargeAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="MMSCL">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSCL.dll</HintPath>
+    </Reference>
+    <Reference Include="MMSComponentInfo">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSComponentInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="MMSInterfaces">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NativeEncryption">
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NativeEncryption.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NLog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Tier\AuditTrail.cs" />
+    <Compile Include="Business Tier\CCCustomerTokInfo.cs" />
+    <Compile Include="Business Tier\CLCards.cs" />
+    <Compile Include="Business Tier\CLCoupons.cs" />
+    <Compile Include="Business Tier\CLPointsAdjustmentLog.cs" />
+    <Compile Include="Business Tier\CLPointsRewardTier.cs" />
+    <Compile Include="Business Tier\CLTransDetail.cs" />
+    <Compile Include="Business Tier\ColorSchemeForViewPOSTrans.cs" />
+    <Compile Include="Business Tier\Coupon.cs" />
+    <Compile Include="Business Tier\Customer.cs" />
+    <Compile Include="Business Tier\CustomerNotes.cs" />
+    <Compile Include="Business Tier\CustomerPerformance.cs" />
+    <Compile Include="Business Tier\Department.cs" />
+    <Compile Include="Business Tier\EndOfDay.cs" />
+    <Compile Include="Business Tier\FileHistory.cs" />
+    <Compile Include="Business Tier\HouseChargeAccount.cs" />
+    <Compile Include="Business Tier\Hyphen\HyphenDataBO.cs" />
+    <Compile Include="Business Tier\Hyphen\HyphenProcessor.cs" />
+    <Compile Include="Business Tier\IDCards.cs" />
+    <Compile Include="Business Tier\ImageCroping.cs" />
+    <Compile Include="Business Tier\InvRecieved.cs" />
+    <Compile Include="Business Tier\InvTransType.cs" />
+    <Compile Include="Business Tier\Item.cs" />
+    <Compile Include="Business Tier\ItemComboPricing.cs" />
+    <Compile Include="Business Tier\ItemCompanion.cs" />
+    <Compile Include="Business Tier\ItemDescription.cs" />
+    <Compile Include="Business Tier\ItemGroupPrice.cs" />
+    <Compile Include="Business Tier\ItemMonitorCategory.cs" />
+    <Compile Include="Business Tier\ItemMonitorCategoryDetail.cs" />
+    <Compile Include="Business Tier\ItemMonitorTransDetail.cs" />
+    <Compile Include="Business Tier\ItemPerformance.cs" />
+    <Compile Include="Business Tier\ItemPriceValidation.cs" />
+    <Compile Include="Business Tier\ItemTax.cs" />
+    <Compile Include="Business Tier\ItemVendor.cs" />
+    <Compile Include="Business Tier\Language.cs" />
+    <Compile Include="Business Tier\MessageLog.cs" />
+    <Compile Include="Business Tier\MsgTemplate.cs" />
+    <Compile Include="Business Tier\NoSaleTransaction.cs" />
+    <Compile Include="Business Tier\Notes.cs" />
+    <Compile Include="Business Tier\Nplex.cs" />
+    <Compile Include="Business Tier\NplexBL.cs" />
+    <Compile Include="Business Tier\PayOut.cs" />
+    <Compile Include="Business Tier\PayOutCat.cs" />
+    <Compile Include="Business Tier\PayType.cs" />
+    <Compile Include="Business Tier\PhysicalInv.cs" />
+    <Compile Include="Business Tier\POSPayTypeList.cs" />
+    <Compile Include="Business Tier\POSTransaction\POSTransaction.cs" />
+    <Compile Include="Business Tier\POSTransaction\POSTransactionFinancial.cs" />
+    <Compile Include="Business Tier\POSTransPayment_CCLog.cs" />
+    <Compile Include="Business Tier\POSTransSignLog.cs" />
+    <Compile Include="Business Tier\Prefrences.cs" />
+    <Compile Include="Business Tier\PSEItem.cs" />
+    <Compile Include="Business Tier\PurchaseOrder.cs" />
+    <Compile Include="Business Tier\ReconciliationDeliveryReport.cs" />
+    <Compile Include="Business Tier\RXHeader.cs" />
+    <Compile Include="Business Tier\ScheduledTasks.cs" />
+    <Compile Include="Business Tier\ScheduledTasksLog.cs" />
+    <Compile Include="Business Tier\Search.cs" />
+    <Compile Include="Business Tier\StationClose.cs" />
+    <Compile Include="Business Tier\StoreCredit.cs" />
+    <Compile Include="Business Tier\StoreCreditDetails.cs" />
+    <Compile Include="Business Tier\SubDepartment.cs" />
+    <Compile Include="Business Tier\SystemInfo.cs" />
+    <Compile Include="Business Tier\TaxCodes.cs" />
+    <Compile Include="Business Tier\Timesheet.cs" />
+    <Compile Include="Business Tier\TransFee.cs" />
+    <Compile Include="Business Tier\Translator.cs" />
+    <Compile Include="Business Tier\User.cs" />
+    <Compile Include="Business Tier\usrMonthlyBL.cs" />
+    <Compile Include="Business Tier\usrWeeklyBL.cs" />
+    <Compile Include="Business Tier\Util_UserOptionDetailRights.cs" />
+    <Compile Include="Business Tier\Vendor.cs" />
+    <Compile Include="Business Tier\WarningMessages.cs" />
+    <Compile Include="Common Data\CCCustomerTokInfoData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CLCardsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CLCouponsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CloseStationData.cs" />
+    <Compile Include="Common Data\CLPointsAdjustmentLogData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CLPointsRewardTierData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\clsPOSDBConstants.cs" />
+    <Compile Include="Common Data\clsPOSENUM.cs" />
+    <Compile Include="Common Data\CLTransDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ColorSchemeForViewPOSTransData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ConsentTransmissionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CouponData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CustomerData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\CustomerNotesInvData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\DepartmentData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\EndOfDay.cs" />
+    <Compile Include="Common Data\FileHistoryData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\FunctionKeysData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\InsSigTransData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\InvRecvDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\InvRecvHeaderData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\InvTransTypeData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemComboPricingData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemComboPricingDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemCompanionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemDescriptionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemGroupPriceData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemMonitorCategoryData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemMonitorCategoryDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemMonitorTransDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemPriceValidationData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemTaxData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ItemVendorData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\MasterOrderDetailsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\MasterOrderDetailsData.Designer.cs">
+      <DependentUpon>MasterOrderDetailsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\MessageLogData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\MessageLogData.Designer.cs">
+      <DependentUpon>MessageLogData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\MsgTemplateData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\NotesData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\OrderDetailsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\OrderDetailsData.Designer.cs">
+      <DependentUpon>OrderDetailsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\PayOutCatData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\PayOutData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\PayTypeData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\PhysicalInvData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\PODetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\POHeaderData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\POSTransPaymentData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\POSTransSignLogData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\PosUIConstants.cs" />
+    <Compile Include="Common Data\PrimeRxPaySettings.cs" />
+    <Compile Include="Common Data\PSEItemData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Rows\BaseRow.cs" />
+    <Compile Include="Common Data\Rows\CCCustomerTokInfoRow.cs" />
+    <Compile Include="Common Data\Rows\CLCardsRow.cs" />
+    <Compile Include="Common Data\Rows\CLCouponsRow.cs" />
+    <Compile Include="Common Data\Rows\CLPointsAdjustmentLogRow.cs" />
+    <Compile Include="Common Data\Rows\CLPointsRewardTierRow.cs" />
+    <Compile Include="Common Data\Rows\CLTransDetailRow.cs" />
+    <Compile Include="Common Data\Rows\ColorSchemeForViewPOSTransRow.cs" />
+    <Compile Include="Common Data\Rows\ConsentTransmissionDataRow.cs" />
+    <Compile Include="Common Data\Rows\CouponRow.cs" />
+    <Compile Include="Common Data\Rows\CustomerNotesRow.cs" />
+    <Compile Include="Common Data\Rows\CustomerRow.cs" />
+    <Compile Include="Common Data\Rows\DepartmentRow.cs" />
+    <Compile Include="Common Data\Rows\FileHistoryRow.cs" />
+    <Compile Include="Common Data\Rows\FunctionKeysRow.cs" />
+    <Compile Include="Common Data\Rows\InsSigTransRow.cs" />
+    <Compile Include="Common Data\Rows\InvRecvDetailRow.cs" />
+    <Compile Include="Common Data\Rows\InvRecvHeaderRow.cs" />
+    <Compile Include="Common Data\Rows\InvTransTypeRow.cs" />
+    <Compile Include="Common Data\Rows\ItemComboPricingDetailRow.cs" />
+    <Compile Include="Common Data\Rows\ItemComboPricingRow.cs" />
+    <Compile Include="Common Data\Rows\ItemCompanionRow.cs" />
+    <Compile Include="Common Data\Rows\ItemDescriptionRow.cs" />
+    <Compile Include="Common Data\Rows\ItemGroupPriceRow.cs" />
+    <Compile Include="Common Data\Rows\ItemMonitorCategoryDetailRow.cs" />
+    <Compile Include="Common Data\Rows\ItemMonitorCategoryRow.cs" />
+    <Compile Include="Common Data\Rows\ItemMonitorTransDetailRow.cs" />
+    <Compile Include="Common Data\Rows\ItemPriceValidationRow.cs" />
+    <Compile Include="Common Data\Rows\ItemRow.cs" />
+    <Compile Include="Common Data\Rows\ItemTaxRow.cs" />
+    <Compile Include="Common Data\Rows\ItemVendorRow.cs" />
+    <Compile Include="Common Data\Rows\MasterOrderDetailsRow.cs" />
+    <Compile Include="Common Data\Rows\MessageLogRow.cs" />
+    <Compile Include="Common Data\Rows\MsgTemplateRow.cs" />
+    <Compile Include="Common Data\Rows\NoSaleTransactionRow.cs" />
+    <Compile Include="Common Data\Rows\NotesRow.cs" />
+    <Compile Include="Common Data\Rows\OrderDetailRow.cs" />
+    <Compile Include="Common Data\Rows\PayOutCatRow.cs" />
+    <Compile Include="Common Data\Rows\PayOutRow.cs" />
+    <Compile Include="Common Data\Rows\PayTypeRow.cs" />
+    <Compile Include="Common Data\Rows\PhysicalInvRow.cs" />
+    <Compile Include="Common Data\Rows\PODetailRow.cs" />
+    <Compile Include="Common Data\Rows\POHeaderRow.cs" />
+    <Compile Include="Common Data\Rows\POSTransPaymentRow.cs" />
+    <Compile Include="Common Data\Rows\POSTransSignLogRow.cs" />
+    <Compile Include="Common Data\Rows\PSEItemRow.cs" />
+    <Compile Include="Common Data\Rows\RxTransactionDataRow.cs" />
+    <Compile Include="Common Data\Rows\ScheduledTasksLogRow.cs" />
+    <Compile Include="Common Data\Rows\ScheduledTasksRow.cs" />
+    <Compile Include="Common Data\Rows\StoreCreditDetailsRow.cs" />
+    <Compile Include="Common Data\Rows\StoreCreditRow.cs" />
+    <Compile Include="Common Data\Rows\SubDepartmentRow.cs" />
+    <Compile Include="Common Data\Rows\SystemInfoRow.cs" />
+    <Compile Include="Common Data\Rows\TaxCodesRow.cs" />
+    <Compile Include="Common Data\Rows\TimesheetRow.cs" />
+    <Compile Include="Common Data\Rows\TransDetailRow.cs" />
+    <Compile Include="Common Data\Rows\TransDetailRXRow.cs" />
+    <Compile Include="Common Data\Rows\TransDetailTaxRow.cs" />
+    <Compile Include="Common Data\Rows\TransFeeRow.cs" />
+    <Compile Include="Common Data\Rows\TransHeaderRow.cs" />
+    <Compile Include="Common Data\Rows\UserRow.cs" />
+    <Compile Include="Common Data\Rows\usrMonthlyRow.cs" />
+    <Compile Include="Common Data\Rows\usrWeeklyRow.cs" />
+    <Compile Include="Common Data\Rows\Util_UserOptionDetailRightsRow.cs" />
+    <Compile Include="Common Data\Rows\VendorRow.cs" />
+    <Compile Include="Common Data\Rows\WarningMessagesDetailRow.cs" />
+    <Compile Include="Common Data\Rows\WarningMessagesRow.cs" />
+    <Compile Include="Common Data\RxTransactionData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ScheduledTasksData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\ScheduledTasksLogData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\StoreCreditData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\StoreCreditData.Designer.cs">
+      <DependentUpon>StoreCreditData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\StoreCreditDetailsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\StoreCreditDetailsData.Designer.cs">
+      <DependentUpon>StoreCreditDetailsData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\SubDepartmentData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\SystemInfoData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CCCustomerTokInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CLCardsTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CLCouponsTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CLPointsAdjustmentLogTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CLPointsRewardTierTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CLTransDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ColorSchemeForViewPOSTransTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ConsentTransmissionDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CouponTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CustomerNotesTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\CustomerTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\DepartmentTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\EnumerableDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\FileHistoryTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\FunctionKeysTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\InsSigTransTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\InvRecvDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\InvRecvHeaderTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\InvTransTypeTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemComboPricingDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemComboPricingTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemCompanionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemDescriptionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemGroupPriceTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemMonitorCategoryDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemMonitorCategoryTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemMonitorTransDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemPriceValidationTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemTaxTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ItemVendorTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\MasterOrderDetailsTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\MasterOrderDetailsTable.Designer.cs">
+      <DependentUpon>MasterOrderDetailsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\Tables\MessageLogTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\MessageLogTable.Designer.cs">
+      <DependentUpon>MessageLogTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\Tables\MsgTemplateTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\NoSaleTransactionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\NotesTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\OrderDetalis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\OrderDetalis.Designer.cs">
+      <DependentUpon>OrderDetalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common Data\Tables\PayOutCatTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\PayOutTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\PayTypeTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\PhysicalInvTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\PODetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\POHeaderTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\POSTransPaymentTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\POSTransSignLogTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\PSEItemTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\RxTransactionDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ScheduledTasksLogTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\ScheduledTasksTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\StoreCreditDetailsTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\StoreCreditTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\SubDepartmentTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\SystemInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TaxCodesTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TimesheetTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TransDetailRXTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TransDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TransDetailTaxTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TransFeeTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\TransHeaderTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\UserTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\usrMonthlyTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\usrWeeklyTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\Util_UserOptionDetailRightsTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\VendorTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\WarningMessagesDetailTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Tables\WarningMessagesTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TaxCodesData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TimesheetData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TransDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TransDetailRXData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TransDetailTaxData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TransFeeData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\TransHeaderData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\UserData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\usrMonthlyData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\usrWeeklyData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\Util_UserOptionDetailRightsData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\VendorData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\WarningMessagesData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common Data\WarningMessagesDetailData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data Tier\AuditTrailSvr.cs" />
+    <Compile Include="Data Tier\CCCustomerTokInfoSvr.cs" />
+    <Compile Include="Data Tier\CLCardsSvr.cs" />
+    <Compile Include="Data Tier\CLCouponsSvr.cs" />
+    <Compile Include="Data Tier\CLPointsAdjustmentLogSvr.cs" />
+    <Compile Include="Data Tier\CLPointsRewardTierSvr.cs" />
+    <Compile Include="Data Tier\CLTransDetailSvr.cs" />
+    <Compile Include="Data Tier\ColorSchemeForViewPOSTransSvr.cs" />
+    <Compile Include="Data Tier\ConsentTansmissionLogSvr.cs" />
+    <Compile Include="Data Tier\CouponSvr.cs" />
+    <Compile Include="Data Tier\CustomerNotesSvr.cs" />
+    <Compile Include="Data Tier\CustomerPerformanceSvr.cs" />
+    <Compile Include="Data Tier\CustomerSvr.cs" />
+    <Compile Include="Data Tier\DatabaseServerBase.cs" />
+    <Compile Include="Data Tier\DepartmentSvr.cs" />
+    <Compile Include="Data Tier\EndOfDaySvr.cs" />
+    <Compile Include="Data Tier\FileHistorySvr.cs" />
+    <Compile Include="Data Tier\FunctionKeysSvr.cs" />
+    <Compile Include="Data Tier\HouseChargeAccount.cs" />
+    <Compile Include="Data Tier\InsSigTransSvr.cs" />
+    <Compile Include="Data Tier\InvRecvDetailSvr.cs" />
+    <Compile Include="Data Tier\InvRecvHeaderSvr.cs" />
+    <Compile Include="Data Tier\InvTransTypeSvr.cs" />
+    <Compile Include="Data Tier\ItemComboPricingDetailSvr.cs" />
+    <Compile Include="Data Tier\ItemComboPricingSvr.cs" />
+    <Compile Include="Data Tier\ItemCompanionSvr.cs" />
+    <Compile Include="Data Tier\ItemDescriptionSvr.cs" />
+    <Compile Include="Data Tier\ItemGroupPriceSvr.cs" />
+    <Compile Include="Data Tier\ItemMonitorCategoryDetailSvr.cs" />
+    <Compile Include="Data Tier\ItemMonitorCategorySvr.cs" />
+    <Compile Include="Data Tier\ItemMonitorTransDetailSvr.cs" />
+    <Compile Include="Data Tier\ItemPerformanceSvr.cs" />
+    <Compile Include="Data Tier\ItemPriceValidationSvr.cs" />
+    <Compile Include="Data Tier\ItemSvr.cs" />
+    <Compile Include="Data Tier\ItemTaxSvr.cs" />
+    <Compile Include="Data Tier\ItemVendorSvr.cs" />
+    <Compile Include="Data Tier\LanguageSvr.cs" />
+    <Compile Include="Data Tier\MessageLogSvr.cs" />
+    <Compile Include="Data Tier\MMSComponentInfoSvr.cs" />
+    <Compile Include="Data Tier\MsgTemplateSvr.cs" />
+    <Compile Include="Data Tier\NoSaleTransactionSvr.cs" />
+    <Compile Include="Data Tier\NotesSvr.cs" />
+    <Compile Include="Data Tier\NplexSvr.cs" />
+    <Compile Include="Data Tier\OtherLanguageDescSvr.cs" />
+    <Compile Include="Data Tier\PayOutCatSvr.cs" />
+    <Compile Include="Data Tier\PayOutSvr.cs" />
+    <Compile Include="Data Tier\PayTypeSvr.cs" />
+    <Compile Include="Data Tier\PhysicalInvSvr.cs" />
+    <Compile Include="Data Tier\PODetailSvr.cs" />
+    <Compile Include="Data Tier\POHeaderSvr.cs" />
+    <Compile Include="Data Tier\POSTransPaymentSvr.cs" />
+    <Compile Include="Data Tier\POSTransSignLogSvr.cs" />
+    <Compile Include="Data Tier\PreferenceSvr.cs" />
+    <Compile Include="Data Tier\PSEItemSvr.cs" />
+    <Compile Include="Data Tier\RxTransactionDataSvr.cs" />
+    <Compile Include="Data Tier\ScheduledTasksLogSvr.cs" />
+    <Compile Include="Data Tier\ScheduledTasksSvr.cs" />
+    <Compile Include="Data Tier\SearchSvr.cs" />
+    <Compile Include="Data Tier\StationCloseSvr.cs" />
+    <Compile Include="Data Tier\StoreCreditDetailsSvr.cs" />
+    <Compile Include="Data Tier\StoreCreditSvr.cs" />
+    <Compile Include="Data Tier\SubDepartmentSvr.cs" />
+    <Compile Include="Data Tier\SystemInfoSvr.cs" />
+    <Compile Include="Data Tier\TaxCodesSvr.cs" />
+    <Compile Include="Data Tier\TimesheetSvr.cs" />
+    <Compile Include="Data Tier\TransDetailRXSvr.cs" />
+    <Compile Include="Data Tier\TransDetailSvr.cs" />
+    <Compile Include="Data Tier\TransDetailTaxSvr.cs" />
+    <Compile Include="Data Tier\TransFeeSvr.cs" />
+    <Compile Include="Data Tier\TransHeaderSvr.cs" />
+    <Compile Include="Data Tier\UserSvr.cs" />
+    <Compile Include="Data Tier\usrMonthlySvr.cs" />
+    <Compile Include="Data Tier\usrWeeklySvr.cs" />
+    <Compile Include="Data Tier\Util_UserOptionDetailRightsSvr.cs" />
+    <Compile Include="Data Tier\VendorSvr.cs" />
+    <Compile Include="Data Tier\WarningMessagesDetailSvr.cs" />
+    <Compile Include="Data Tier\WarningMessagesSvr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ActivityBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\ApplicationConfiguration.cs" />
+    <Compile Include="Resources\clsCryption.cs" />
+    <Compile Include="Resources\clsPatient.cs" />
+    <Compile Include="Resources\clsVerificationBy.cs" />
+    <Compile Include="Resources\ComboItem.cs" />
+    <Compile Include="Resources\Configuration.cs" />
+    <Compile Include="Resources\ConfigurationManager.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCoreCCInfoSelect.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCoreDBuser.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCoreHouseCharge.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCoreLogin.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCorePrimeRXHelper.cs" />
+    <Compile Include="Resources\DelegateHandler\clsCoreUIHelper.cs" />
+    <Compile Include="Document\DocumenLocation.cs" />
+    <Compile Include="Document\DocumentContext.cs" />
+    <Compile Include="Document\DocumentStrategy.cs" />
+    <Compile Include="Resources\Encryption.cs" />
+    <Compile Include="Resources\ErrorHandler\ErrorHandler.cs" />
+    <Compile Include="Resources\ErrorHandler\Logs.cs" />
+    <Compile Include="Resources\ErrorHandler\OtherExceptions.cs" />
+    <Compile Include="Resources\ErrorHandler\POSExceptions.cs" />
+    <Compile Include="Resources\frmCCInfoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\frmCCInfoSelect.designer.cs">
+      <DependentUpon>frmCCInfoSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\frmWaitScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\LabelHandler\DirectPrint.cs" />
+    <Compile Include="Document\LocalDriveDocument.cs" />
+    <Compile Include="Resources\LogData.cs" />
+    <Compile Include="Resources\MMSComponentInfo.cs" />
+    <Compile Include="Document\NativeEncryption.cs" />
+    <Compile Include="Resources\PaymentHandler\PayTypes.cs" />
+    <Compile Include="Resources\PaymentHandler\PccSvrPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PaymentHandler\POSEnum.cs" />
+    <Compile Include="Resources\PaymentHandler\SigPadUtil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PaymentHandler\TaxTypes.cs" />
+    <Compile Include="Resources\ProgressPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\RXException.cs" />
+    <Compile Include="Resources\SQLBlock.cs" />
+    <Compile Include="Document\SQlDataBaseDocument.cs" />
+    <Compile Include="Resources\UserManagement\sm_Modules.cs" />
+    <Compile Include="Resources\UserManagement\sm_Permissions.cs" />
+    <Compile Include="Resources\UserManagement\sm_Screens.cs" />
+    <Compile Include="Resources\UserManagement\UserPriviliges.cs" />
+    <Compile Include="Resources\XchargeWindow.cs" />
+    <Compile Include="Web References\IVULottoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common Data\CLCardsData.resx">
+      <DependentUpon>CLCardsData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\CLCouponsData.resx">
+      <DependentUpon>CLCouponsData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\CLPointsAdjustmentLogData.resx">
+      <DependentUpon>CLPointsAdjustmentLogData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\CLPointsRewardTierData.resx">
+      <DependentUpon>CLPointsRewardTierData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ColorSchemeForViewPOSTransData.resx">
+      <DependentUpon>ColorSchemeForViewPOSTransData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\CustomerData.resx">
+      <DependentUpon>CustomerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\CustomerNotesInvData.resx">
+      <DependentUpon>CustomerNotesInvData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\DepartmentData.resx">
+      <DependentUpon>DepartmentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\FunctionKeysData.resx">
+      <DependentUpon>FunctionKeysData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\InvRecvDetailData.resx">
+      <DependentUpon>InvRecvDetailData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\InvRecvHeaderData.resx">
+      <DependentUpon>InvRecvHeaderData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\InvTransTypeData.resx">
+      <DependentUpon>InvTransTypeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemComboPricingData.resx">
+      <DependentUpon>ItemComboPricingData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemComboPricingDetailData.resx">
+      <DependentUpon>ItemComboPricingDetailData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemCompanionData.resx">
+      <DependentUpon>ItemCompanionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemData.resx">
+      <DependentUpon>ItemData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemDescriptionData.resx">
+      <DependentUpon>ItemDescriptionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemGroupPriceData.resx">
+      <DependentUpon>ItemGroupPriceData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemMonitorCategoryData.resx">
+      <DependentUpon>ItemMonitorCategoryData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemMonitorCategoryDetailData.resx">
+      <DependentUpon>ItemMonitorCategoryDetailData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemPriceValidationData.resx">
+      <DependentUpon>ItemPriceValidationData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\ItemVendorData.resx">
+      <DependentUpon>ItemVendorData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\PayOutData.resx">
+      <DependentUpon>PayOutData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\PayTypeData.resx">
+      <DependentUpon>PayTypeData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\PhysicalInvData.resx">
+      <DependentUpon>PhysicalInvData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\PODetailData.resx">
+      <DependentUpon>PODetailData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\POHeaderData.resx">
+      <DependentUpon>POHeaderData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\POSTransPaymentData.resx">
+      <DependentUpon>POSTransPaymentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\SubDepartmentData.resx">
+      <DependentUpon>SubDepartmentData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CLCardsTable.resx">
+      <DependentUpon>CLCardsTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CLCouponsTable.resx">
+      <DependentUpon>CLCouponsTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CLPointsAdjustmentLogTable.resx">
+      <DependentUpon>CLPointsAdjustmentLogTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CLPointsRewardTierTable.resx">
+      <DependentUpon>CLPointsRewardTierTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ColorSchemeForViewPOSTransTable.resx">
+      <DependentUpon>ColorSchemeForViewPOSTransTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CustomerNotesTable.resx">
+      <DependentUpon>CustomerNotesTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\CustomerTable.resx">
+      <DependentUpon>CustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\DepartmentTable.resx">
+      <DependentUpon>DepartmentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\FunctionKeysTable.resx">
+      <DependentUpon>FunctionKeysTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\InvRecvDetailTable.resx">
+      <DependentUpon>InvRecvDetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\InvRecvHeaderTable.resx">
+      <DependentUpon>InvRecvHeaderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\InvTransTypeTable.resx">
+      <DependentUpon>InvTransTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemComboPricingDetailTable.resx">
+      <DependentUpon>ItemComboPricingDetailTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemComboPricingTable.resx">
+      <DependentUpon>ItemComboPricingTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemCompanionTable.resx">
+      <DependentUpon>ItemCompanionTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemDescription.resx" />
+    <EmbeddedResource Include="Common Data\Tables\ItemGroupPriceTable.resx">
+      <DependentUpon>ItemGroupPriceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemMonitorCategoryDetailTable.resx">
+      <DependentUpon>ItemMonitorCategoryDetailTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemMonitorCategoryTable.resx">
+      <DependentUpon>ItemMonitorCategoryTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemPriceValidationTable.resx">
+      <DependentUpon>ItemPriceValidationTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemTable.resx">
+      <DependentUpon>ItemTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\ItemVendorTable.resx">
+      <DependentUpon>ItemVendorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\PayOutTable.resx">
+      <DependentUpon>PayOutTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\PayTypeTable.resx">
+      <DependentUpon>PayTypeTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\PhysicalInvTable.resx">
+      <DependentUpon>PhysicalInvTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\PODetailTable.resx">
+      <DependentUpon>PODetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\POHeaderTable.resx">
+      <DependentUpon>POHeaderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\POSTransPaymentTable.resx">
+      <DependentUpon>POSTransPaymentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\SubDepartmentTable.resx">
+      <DependentUpon>SubDepartmentTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TaxCodesTable.resx">
+      <DependentUpon>TaxCodesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TimesheetTable.resx">
+      <DependentUpon>TimesheetTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TransDetailRXTable.resx">
+      <DependentUpon>TransDetailRXTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TransDetailTable.resx">
+      <DependentUpon>TransDetailTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TransDetailTaxTable.resx">
+      <DependentUpon>TransDetailTaxTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\TransHeaderTable.resx">
+      <DependentUpon>TransHeaderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\UserTable.resx">
+      <DependentUpon>UserTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\VendorTable.resx">
+      <DependentUpon>VendorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\WarningMessagesDetailTable.resx">
+      <DependentUpon>WarningMessagesDetailTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\Tables\WarningMessagesTable.resx">
+      <DependentUpon>WarningMessagesTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TaxCodesData.resx">
+      <DependentUpon>TaxCodesData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TimesheetData.resx">
+      <DependentUpon>TimesheetData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TransDetailData.resx">
+      <DependentUpon>TransDetailData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TransDetailRXData.resx">
+      <DependentUpon>TransDetailRXData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TransDetailTaxData.resx">
+      <DependentUpon>TransDetailTaxData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\TransHeaderData.resx">
+      <DependentUpon>TransHeaderData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\UserData.resx">
+      <DependentUpon>UserData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\VendorData.resx">
+      <DependentUpon>VendorData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\WarningMessagesData.resx">
+      <DependentUpon>WarningMessagesData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common Data\WarningMessagesDetailData.resx">
+      <DependentUpon>WarningMessagesDetailData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ActivityBar.resx">
+      <DependentUpon>ActivityBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\frmCCInfoSelect.resx">
+      <DependentUpon>frmCCInfoSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\frmWaitScreen.resx">
+      <DependentUpon>frmWaitScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ProgressPanel.resx">
+      <DependentUpon>ProgressPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\backarrow2.png" />
+    <Content Include="Resources\blue-arrow-left.png" />
+    <Content Include="Resources\blue-arrow-right.png" />
+    <Content Include="Resources\CreditCard.png" />
+    <Content Include="Resources\cross.png" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="app.config" />
+    <None Include="Resources\close2.bmp" />
+    <None Include="Resources\close.png" />
+    <None Include="Web References\IVULottoService\ivuLotoData1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IVULottoService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\IVULottoService\txInfoResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IVULottoService\TxServerService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://txportwst.txhubpr.com/txserver/1%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\IVULottoService\</RelPath>
+      <UpdateFromURL>http://txportwst.txhubpr.com/txserver/1%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PrimePOS_Core_IVULottoService_TxServerService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MMS.Device\MMS.Device\MMS.Device.csproj">
+      <Project>{d272e97c-2ee2-49a7-bffe-84f180c7f6ec}</Project>
+      <Name>MMS.Device</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\AppLogger\AppLogger.csproj">
+      <Project>{bff6c96c-9e92-4fc8-85b9-bbe9edfd89cb}</Project>
+      <Name>AppLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.EVERTEC\MMS.EVERTEC.csproj">
+      <Project>{81159bcd-c1ea-44a0-bd80-b51b0f165412}</Project>
+      <Name>MMS.EVERTEC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.HPSPAX\MMS.HPSPAX.csproj">
+      <Project>{dea2f6b2-5dcd-46d5-94d8-922cea6196e2}</Project>
+      <Name>MMS.HPSPAX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.HPS\MMS.HPS.csproj">
+      <Project>{76cd9193-00ca-4805-b0d8-40f95086fe29}</Project>
+      <Name>MMS.HPS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.PAYMENT\MMS.PAYMENT.csproj">
+      <Project>{c7afac56-2268-4a2c-bfbf-3192fcba49f9}</Project>
+      <Name>MMS.PAYMENT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.PCCHARGE\MMS.PCCHARGE.csproj">
+      <Project>{bdf5a71f-b58c-48bc-ad2e-d8e611c342e9}</Project>
+      <Name>MMS.PCCHARGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.PrimeRxPay\MMS.PrimeRxPay.csproj">
+      <Project>{0aaa83ca-0090-48be-b5fd-988b381b2d2a}</Project>
+      <Name>MMS.PrimeRxPay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.PROCESSOR\MMS.PROCESSOR.csproj">
+      <Project>{68ab0487-dc99-42a6-933d-95d30ce0b418}</Project>
+      <Name>MMS.PROCESSOR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.Vantiv\MMS.VANTIV.csproj">
+      <Project>{4bb03078-f8be-4f0e-88cc-24939ee750d2}</Project>
+      <Name>MMS.VANTIV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.XCHARGE\MMS.XCHARGE.csproj">
+      <Project>{28d3a313-5afe-430f-b7a1-ba4512e7d695}</Project>
+      <Name>MMS.XCHARGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\MMS.XLINK\MMS.XLINK.csproj">
+      <Project>{65642fe3-9281-492a-abbc-89c737f103c3}</Project>
+      <Name>MMS.XLINK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.PAYMENTSVR\PossqlData\PossqlData.csproj">
+      <Project>{7cacb82d-919d-4036-b4ac-32f313953e73}</Project>
+      <Name>PossqlData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PaySystem\Devices\EDevice.csproj">
+      <Project>{7e86e2de-c042-4bf0-9737-3fa32dd8351b}</Project>
+      <Name>EDevice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PaySystem\FirstMile\FirstMile.csproj">
+      <Project>{bf26a7dd-c204-49d0-bde1-8966f2e18331}</Project>
+      <Name>FirstMile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PharmData\PharmData.csproj">
+      <Project>{3e678125-3370-450d-8dff-42824b4a3a90}</Project>
+      <Name>PharmData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PrimeRxPayProcessor\PrimeRxPayProcessor.csproj">
+      <Project>{0b77f185-b859-4546-b2e2-b8eeae288204}</Project>
+      <Name>PrimeRxPayProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SigDiplay\SigDiplay.csproj">
+      <Project>{c62f5913-4291-4c8c-9d79-4680db7d3bf6}</Project>
+      <Name>SigDiplay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMSAppUpdater\MMSAppUpdater.csproj">
+      <Project>{7b8e63a7-89a9-4e4d-b6cb-231a4ba1c225}</Project>
+      <Name>MMSAppUpdater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResourceManager\ResourceManager.csproj">
+      <Project>{e3847786-e920-427d-8e03-ff3adddc96e1}</Project>
+      <Name>ResourceManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AUTHCODE_ROOT>
+  <AUTHCODE>
+    <R000>Approved</R000>
+    <R001></R001>
+    <R002>Touchtone capture, won’t roll to an operator</R002>
+    <R003>Invalid Merchant ID</R003>
+    <R004>Authorization Declined</R004>
+    <R005>Authorization Declined</R005>
+    <R006>Requested transaction reversal was successful</R006>
+    <R007>Response for CVV2/CVC2 failure; declined</R007>
+    <R008>Approved with positive ID; host does not capture this transaction</R008>
+    <R012></R012>
+    <R013>Amount entered is invalid</R013>
+    <R014></R014>
+    <R019>NDC eCOMMERCE GATEWAY requests a retry</R019>
+    <R054>Expiration date entered is incorrect</R054>
+    <R055>Incorrect PIN entered</R055>
+    <R058>Merchant not set up for transaction code used</R058>
+    <R075>Maximum PIN number entry attempts exceeded</R075>
+    <R094>Transaction entered is a duplicate</R094>
+    <RON1>Account number entered during a void or adjustment transaction does not match the account number stored in the host for that item</RON1>
+    <R0N2>Amount entered for a void or adjustment transaction does not match the amount stored in the host for that item</R0N2>
+    <R0N3>Item number entered for a void or adjustment transaction is incorrect</R0N3>
+    <R0N4>An adjustment or item review was attempted on a transaction previously voided or reversed</R0N4>
+    <R0N5>Terminal has not been balanced within time specified in the NDC eCOMMERCE Merchant Master File for this merchant, but merchant is set up to perform extra transactions before balancing</R0N5>
+    <R0N7>Override transaction is attempted on a non-duplicated transaction</R0N7>
+    <R0N8>Format of the transaction is incorrect</R0N8>
+    <R0NA>Reversal transaction is attempted on a transaction that is not in the open batch on the host</R0NA>
+    <R0NC>Approved, but this EDC merchant is not set up to capture this card type (applies only to credit card transactions)</R0NC>
+    <R0NE>Approved, but this EDC merchant is not set up to capture this card type (applies only to credit card transactions)</R0NE>
+    <R0NF>Acquiring Bank ID entered is incorrect</R0NF>
+    <R0P0>Transaction not supported by EFT Network or card issuer</R0P0>
+    <R0P1>Approved debit card transaction</R0P1>
+    <R0P2>NDC eCOMMERCE GATEWAY is down</R0P2>
+    <R0P3>NDC eCOMMERCE GATEWAY Link timed out</R0P3>
+    <R0P4>NDC eCOMMERCE GATEWAY cannot contact EFT network or EFT Group ID is incorrect</R0P4>
+    <R0P5>Merchant is not set up for debit on NDC eCOMMERCE Merchant Master File</R0P5>
+    <R0P6>Debit card not on issuer file</R0P6>
+    <R0P7>EFT network cannot contact issuer</R0P7>
+    <R0P8>Card is not eligible for POS</R0P8>
+    <R0P9>Type of account entered cannot be accessed (checking, savings, etc.)</R0P9>
+    <R0PA>No sharing arrangement for this card</R0PA>
+    <R0PB>NDC eCOMMERCE GATEWAY Financial Institution ID not set up</R0PB>
+    <R0S0>Match on SCAN file; XXXXXXXXXX is routing/transit number on the negative file</R0S0>
+    <R0S1>License or ID number entered during a check authorization transaction is incorrect</R0S1>
+    <R0S2>State code entered is incorrect</R0S2>
+    <R0T1>EDC application down; try later</R0T1>
+    <R0T2>Debit application down; try later  </R0T2>
+    <R0T3>SCAN application is down; try later</R0T3>
+    <R0XC>Error contacting processor"</R0XC>
+    <R121>Exceeds withdrawal amount limit</R121>
+    <R123>Exceeds withdrawal frequency limit</R123>
+    <R1020>Connection Timeout</R1020>
+    <RERROR>IIAS Approved Amount cannot be greater than total amount</RERROR>
+  </AUTHCODE>
+</AUTHCODE_ROOT>

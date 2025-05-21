@@ -1,0 +1,229 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.PAYMENT", "MMS.PAYMENT\MMS.PAYMENT.csproj", "{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695} = {28D3A313-5AFE-430F-B7A1-BA4512E7D695}
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9} = {BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}
+		{65642FE3-9281-492A-ABBC-89C737F103C3} = {65642FE3-9281-492A-ABBC-89C737F103C3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.PAYMENTHOST", "MMS.PAYMENTHOST\MMS.PAYMENTHOST.csproj", "{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.PROCESSOR", "MMS.PROCESSOR\MMS.PROCESSOR.csproj", "{68AB0487-DC99-42A6-933D-95D30CE0B418}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB} = {BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.XCHARGE", "MMS.XCHARGE\MMS.XCHARGE.csproj", "{28D3A313-5AFE-430F-B7A1-BA4512E7D695}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68AB0487-DC99-42A6-933D-95D30CE0B418} = {68AB0487-DC99-42A6-933D-95D30CE0B418}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.PCCHARGE", "MMS.PCCHARGE\MMS.PCCHARGE.csproj", "{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68AB0487-DC99-42A6-933D-95D30CE0B418} = {68AB0487-DC99-42A6-933D-95D30CE0B418}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.XLINK", "MMS.XLINK\MMS.XLINK.csproj", "{65642FE3-9281-492A-ABBC-89C737F103C3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68AB0487-DC99-42A6-933D-95D30CE0B418} = {68AB0487-DC99-42A6-933D-95D30CE0B418}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.HPS", "MMS.HPS\MMS.HPS.csproj", "{76CD9193-00CA-4805-B0D8-40F95086FE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLogger", "AppLogger\AppLogger.csproj", "{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.HPSPAX", "MMS.HPSPAX\MMS.HPSPAX.csproj", "{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68AB0487-DC99-42A6-933D-95D30CE0B418} = {68AB0487-DC99-42A6-933D-95D30CE0B418}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PossqlData", "PossqlData\PossqlData.csproj", "{7CACB82D-919D-4036-B4AC-32F313953E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solutran", "Soltran\Solutran.csproj", "{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.EVERTEC", "MMS.EVERTEC\MMS.EVERTEC.csproj", "{81159BCD-C1EA-44A0-BD80-B51B0F165412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.VANTIV", "MMS.Vantiv\MMS.VANTIV.csproj", "{4BB03078-F8BE-4F0E-88CC-24939EE750D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMS.PrimeRxPay", "MMS.PrimeRxPay\MMS.PrimeRxPay.csproj", "{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Debug|x86.ActiveCfg = Debug|x86
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Debug|x86.Build.0 = Debug|x86
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Release|x86.ActiveCfg = Release|x86
+		{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}.Release|x86.Build.0 = Release|x86
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Debug|x86.ActiveCfg = Debug|x86
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Debug|x86.Build.0 = Debug|x86
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Release|x86.ActiveCfg = Release|x86
+		{543C48DD-0FA8-4DBC-B532-23A3C0DF90F8}.Release|x86.Build.0 = Release|x86
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Debug|x86.ActiveCfg = Debug|x86
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Debug|x86.Build.0 = Debug|x86
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Release|x86.ActiveCfg = Release|x86
+		{68AB0487-DC99-42A6-933D-95D30CE0B418}.Release|x86.Build.0 = Release|x86
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Debug|x86.ActiveCfg = Debug|x86
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Debug|x86.Build.0 = Debug|x86
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Release|x86.ActiveCfg = Release|x86
+		{28D3A313-5AFE-430F-B7A1-BA4512E7D695}.Release|x86.Build.0 = Release|x86
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Debug|x86.ActiveCfg = Debug|x86
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Debug|x86.Build.0 = Debug|x86
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Release|x86.ActiveCfg = Release|x86
+		{BDF5A71F-B58C-48BC-AD2E-D8E611C342E9}.Release|x86.Build.0 = Release|x86
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Debug|x86.ActiveCfg = Debug|x86
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Debug|x86.Build.0 = Debug|x86
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Release|x86.ActiveCfg = Release|x86
+		{65642FE3-9281-492A-ABBC-89C737F103C3}.Release|x86.Build.0 = Release|x86
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Debug|x86.ActiveCfg = Debug|x86
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Debug|x86.Build.0 = Debug|x86
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Release|x86.ActiveCfg = Release|x86
+		{76CD9193-00CA-4805-B0D8-40F95086FE29}.Release|x86.Build.0 = Release|x86
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Debug|x86.ActiveCfg = Debug|x86
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Debug|x86.Build.0 = Debug|x86
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Release|x86.ActiveCfg = Release|x86
+		{BFF6C96C-9E92-4FC8-85B9-BBE9EDFD89CB}.Release|x86.Build.0 = Release|x86
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Debug|x86.Build.0 = Debug|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEA2F6B2-5DCD-46D5-94D8-922CEA6196E2}.Release|x86.Build.0 = Release|Any CPU
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Debug|x86.ActiveCfg = Debug|x86
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Debug|x86.Build.0 = Debug|x86
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Release|x86.ActiveCfg = Release|x86
+		{7CACB82D-919D-4036-B4AC-32F313953E73}.Release|x86.Build.0 = Release|x86
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Debug|x86.Build.0 = Debug|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Release|x86.ActiveCfg = Release|Any CPU
+		{2428CAA5-EDA4-44B5-A11D-2E8796D31D08}.Release|x86.Build.0 = Release|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Debug|x86.Build.0 = Debug|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Release|x86.ActiveCfg = Release|Any CPU
+		{81159BCD-C1EA-44A0-BD80-B51B0F165412}.Release|x86.Build.0 = Release|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Debug|x86.Build.0 = Debug|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Release|x86.ActiveCfg = Release|Any CPU
+		{4BB03078-F8BE-4F0E-88CC-24939EE750D2}.Release|x86.Build.0 = Release|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Debug|x86.Build.0 = Debug|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AAA83CA-0090-48BE-B5FD-988B381B2D2A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3198D002-0F00-4819-BA77-49940230B992}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://mmsdev2014:8080/tfs/primepos
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AppLogger\\AppLogger.csproj
+		SccProjectName1 = AppLogger
+		SccLocalPath1 = AppLogger
+		SccProjectUniqueName2 = MMS.EVERTEC\\MMS.EVERTEC.csproj
+		SccProjectName2 = MMS.EVERTEC
+		SccLocalPath2 = MMS.EVERTEC
+		SccProjectUniqueName3 = MMS.HPS\\MMS.HPS.csproj
+		SccProjectName3 = MMS.HPS
+		SccLocalPath3 = MMS.HPS
+		SccProjectUniqueName4 = MMS.HPSPAX\\MMS.HPSPAX.csproj
+		SccProjectName4 = MMS.HPSPAX
+		SccLocalPath4 = MMS.HPSPAX
+		SccProjectUniqueName5 = MMS.PAYMENT\\MMS.PAYMENT.csproj
+		SccProjectName5 = MMS.PAYMENT
+		SccLocalPath5 = MMS.PAYMENT
+		SccProjectUniqueName6 = MMS.PAYMENTHOST\\MMS.PAYMENTHOST.csproj
+		SccProjectName6 = MMS.PAYMENTHOST
+		SccLocalPath6 = MMS.PAYMENTHOST
+		SccProjectUniqueName7 = MMS.PCCHARGE\\MMS.PCCHARGE.csproj
+		SccProjectName7 = MMS.PCCHARGE
+		SccLocalPath7 = MMS.PCCHARGE
+		SccProjectUniqueName8 = MMS.PrimeRxPay\\MMS.PrimeRxPay.csproj
+		SccProjectName8 = MMS.PrimeRxPay
+		SccLocalPath8 = MMS.PrimeRxPay
+		SccProjectUniqueName9 = MMS.PROCESSOR\\MMS.PROCESSOR.csproj
+		SccProjectName9 = MMS.PROCESSOR
+		SccLocalPath9 = MMS.PROCESSOR
+		SccProjectUniqueName10 = MMS.Vantiv\\MMS.VANTIV.csproj
+		SccProjectName10 = MMS.Vantiv
+		SccLocalPath10 = MMS.Vantiv
+		SccProjectUniqueName11 = MMS.XCHARGE\\MMS.XCHARGE.csproj
+		SccProjectName11 = MMS.XCHARGE
+		SccLocalPath11 = MMS.XCHARGE
+		SccProjectUniqueName12 = MMS.XLINK\\MMS.XLINK.csproj
+		SccProjectName12 = MMS.XLINK
+		SccLocalPath12 = MMS.XLINK
+		SccProjectUniqueName13 = PossqlData\\PossqlData.csproj
+		SccProjectName13 = PossqlData
+		SccLocalPath13 = PossqlData
+		SccProjectUniqueName14 = Soltran\\Solutran.csproj
+		SccProjectName14 = Soltran
+		SccLocalPath14 = Soltran
+	EndGlobalSection
+EndGlobal

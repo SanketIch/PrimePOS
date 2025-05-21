@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7AFAC56-2268-4A2C-BFBF-3192FCBA49F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MMS.PAYMENT</RootNamespace>
+    <AssemblyName>MMS.PAYMENT</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.4\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PaymentServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MMS.ELAVON\MMS.ELAVON.csproj">
+      <Project>{4e664817-6367-424d-8950-7395e69716ca}</Project>
+      <Name>MMS.ELAVON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MMS.GlobalPayments.Api\MMS.GlobalPayments.Api.csproj">
+      <Project>{522680bf-d0c0-4825-b006-423363ca5d2a}</Project>
+      <Name>MMS.GlobalPayments.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.EVERTEC\MMS.EVERTEC.csproj">
+      <Project>{81159bcd-c1ea-44a0-bd80-b51b0f165412}</Project>
+      <Name>MMS.EVERTEC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.HPSPAX\MMS.HPSPAX.csproj">
+      <Project>{dea2f6b2-5dcd-46d5-94d8-922cea6196e2}</Project>
+      <Name>MMS.HPSPAX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.HPS\MMS.HPS.csproj">
+      <Project>{76cd9193-00ca-4805-b0d8-40f95086fe29}</Project>
+      <Name>MMS.HPS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.PCCHARGE\MMS.PCCHARGE.csproj">
+      <Project>{bdf5a71f-b58c-48bc-ad2e-d8e611c342e9}</Project>
+      <Name>MMS.PCCHARGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.PrimeRxPay\MMS.PrimeRxPay.csproj">
+      <Project>{0aaa83ca-0090-48be-b5fd-988b381b2d2a}</Project>
+      <Name>MMS.PrimeRxPay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.PROCESSOR\MMS.PROCESSOR.csproj">
+      <Project>{68ab0487-dc99-42a6-933d-95d30ce0b418}</Project>
+      <Name>MMS.PROCESSOR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.Vantiv\MMS.VANTIV.csproj">
+      <Project>{4bb03078-f8be-4f0e-88cc-24939ee750d2}</Project>
+      <Name>MMS.VANTIV</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.XCHARGE\MMS.XCHARGE.csproj">
+      <Project>{28d3a313-5afe-430f-b7a1-ba4512e7d695}</Project>
+      <Name>MMS.XCHARGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMS.XLINK\MMS.XLINK.csproj">
+      <Project>{65642fe3-9281-492a-abbc-89c737f103c3}</Project>
+      <Name>MMS.XLINK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

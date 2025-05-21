@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetConnectionStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetConnectionStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetConnectionStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPrescriber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchPrescriberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPrescriberResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDrug">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDrugResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchDrugResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchItemResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NDC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PRICETYPEID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceDetailsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDrugPriceChangeLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDrugPriceChangeLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchDrugPriceChangeLogResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchINSCAR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchINSCARResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchINSCARResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchAddressResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescriberData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PrescriberNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescriberDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrescriberDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DRUGNDC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugPriceChangeLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DrugNDC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inscd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugPriceChangeLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugPriceChangeLogResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugPriceChangeLogByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DrugNDC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inscd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugPriceChangeLogByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugPriceChangeLogByDateResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetINSCARData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BINNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MACCODE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetINSCARDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetINSCARDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPCCData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TXRCODE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="languages" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="formats" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPCCDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPCCDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ADDR_CD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAddressResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ADDR_CD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrescDetailsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescriberDetailsSPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SPI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrescriberDetailsSPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrescriberDetailsSPIResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPresDetailByFNameSPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPresDetailByFNameSPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPresDetailByFNameSPIResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPresDetailByLNameSPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPresDetailByLNameSPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPresDetailByLNameSPIResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFTPCredentials">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFTPCredentialsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFTPCredentialsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMedGuideFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMedGuideFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMedGuideFileNameResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPrescriberSPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchCrieteria" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPrescriberSPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPrescriberSPIResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPriceUpateHistroy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="logDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="insertedItemCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedItemCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPriceUpateHistroyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPriceUpateHistroyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceUpdateHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="updatedNPI" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceUpdateHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceUpdateHistoryResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="priceUpdateHist">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticatePharmacy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticatePharmacyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuthenticatePharmacyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_MessagesCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_MessagesCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPrime_MessagesCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_MessagesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_MessagesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrime_MessagesInfoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_LatestMessagesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrime_LatestMessagesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrime_LatestMessagesInfoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsMessage">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatusPrime_PharmacyMessagesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStatusPrime_PharmacyMessagesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateStatusPrime_PharmacyMessagesInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnTimeInterval">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnTimeIntervalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fnTimeIntervalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnCheckIfNPIExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NPI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnCheckIfNPIExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fnCheckIfNPIExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetPharmacyInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetPharmacyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetPharmacyInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetCustomerID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetCustomerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetCustomerIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetAllProducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetAllProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetAllProductsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnCustomerProducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnCustomerProductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnCustomerProductsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fnGetQuery">
+        <s:complexType />
+      </s:element>
+      <s:element name="fnGetQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fnGetQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetConnectionStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConnectionStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetConnectionStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConnectionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchPrescriberSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchPrescriber" />
+  </wsdl:message>
+  <wsdl:message name="SearchPrescriberSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchPrescriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchDrugSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchDrug" />
+  </wsdl:message>
+  <wsdl:message name="SearchDrugSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchDrugResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchItemSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchItem" />
+  </wsdl:message>
+  <wsdl:message name="SearchItemSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemData" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchDrugPriceChangeLogSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchDrugPriceChangeLog" />
+  </wsdl:message>
+  <wsdl:message name="SearchDrugPriceChangeLogSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchDrugPriceChangeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchINSCARSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchINSCAR" />
+  </wsdl:message>
+  <wsdl:message name="SearchINSCARSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchINSCARResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchAddress" />
+  </wsdl:message>
+  <wsdl:message name="SearchAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescriberDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrescriberData" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescriberDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrescriberDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugData" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugPriceChangeLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugPriceChangeLog" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugPriceChangeLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugPriceChangeLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugPriceChangeLogByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugPriceChangeLogByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugPriceChangeLogByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugPriceChangeLogByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetINSCARDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetINSCARData" />
+  </wsdl:message>
+  <wsdl:message name="GetINSCARDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetINSCARDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPCCDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPCCData" />
+  </wsdl:message>
+  <wsdl:message name="GetPCCDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPCCDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrescDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrescDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescriberDetailsSPISoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrescriberDetailsSPI" />
+  </wsdl:message>
+  <wsdl:message name="GetPrescriberDetailsSPISoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrescriberDetailsSPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPresDetailByFNameSPISoapIn">
+    <wsdl:part name="parameters" element="tns:GetPresDetailByFNameSPI" />
+  </wsdl:message>
+  <wsdl:message name="GetPresDetailByFNameSPISoapOut">
+    <wsdl:part name="parameters" element="tns:GetPresDetailByFNameSPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPresDetailByLNameSPISoapIn">
+    <wsdl:part name="parameters" element="tns:GetPresDetailByLNameSPI" />
+  </wsdl:message>
+  <wsdl:message name="GetPresDetailByLNameSPISoapOut">
+    <wsdl:part name="parameters" element="tns:GetPresDetailByLNameSPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPCredentialsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFTPCredentials" />
+  </wsdl:message>
+  <wsdl:message name="GetFTPCredentialsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFTPCredentialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMedGuideFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMedGuideFileName" />
+  </wsdl:message>
+  <wsdl:message name="GetMedGuideFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMedGuideFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchPrescriberSPISoapIn">
+    <wsdl:part name="parameters" element="tns:SearchPrescriberSPI" />
+  </wsdl:message>
+  <wsdl:message name="SearchPrescriberSPISoapOut">
+    <wsdl:part name="parameters" element="tns:SearchPrescriberSPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPriceUpateHistroySoapIn">
+    <wsdl:part name="parameters" element="tns:AddPriceUpateHistroy" />
+  </wsdl:message>
+  <wsdl:message name="AddPriceUpateHistroySoapOut">
+    <wsdl:part name="parameters" element="tns:AddPriceUpateHistroyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceUpdateHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceUpdateHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceUpdateHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceUpdateHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticatePharmacySoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticatePharmacy" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticatePharmacySoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticatePharmacyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_MessagesCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrime_MessagesCount" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_MessagesCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrime_MessagesCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_MessagesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrime_MessagesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_MessagesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrime_MessagesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_LatestMessagesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrime_LatestMessagesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPrime_LatestMessagesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrime_LatestMessagesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusPrime_PharmacyMessagesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStatusPrime_PharmacyMessagesInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStatusPrime_PharmacyMessagesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStatusPrime_PharmacyMessagesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnTimeIntervalSoapIn">
+    <wsdl:part name="parameters" element="tns:fnTimeInterval" />
+  </wsdl:message>
+  <wsdl:message name="fnTimeIntervalSoapOut">
+    <wsdl:part name="parameters" element="tns:fnTimeIntervalResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnCheckIfNPIExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:fnCheckIfNPIExists" />
+  </wsdl:message>
+  <wsdl:message name="fnCheckIfNPIExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:fnCheckIfNPIExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetPharmacyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetPharmacyInfo" />
+  </wsdl:message>
+  <wsdl:message name="fnGetPharmacyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetPharmacyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetCustomerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="fnGetCustomerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="fnGetAllProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnCustomerProductsSoapIn">
+    <wsdl:part name="parameters" element="tns:fnCustomerProducts" />
+  </wsdl:message>
+  <wsdl:message name="fnCustomerProductsSoapOut">
+    <wsdl:part name="parameters" element="tns:fnCustomerProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="fnGetQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:fnGetQuery" />
+  </wsdl:message>
+  <wsdl:message name="fnGetQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:fnGetQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetConnectionStatus">
+      <wsdl:input message="tns:GetConnectionStatusSoapIn" />
+      <wsdl:output message="tns:GetConnectionStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriber">
+      <wsdl:input message="tns:SearchPrescriberSoapIn" />
+      <wsdl:output message="tns:SearchPrescriberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrug">
+      <wsdl:input message="tns:SearchDrugSoapIn" />
+      <wsdl:output message="tns:SearchDrugSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchItem">
+      <wsdl:input message="tns:SearchItemSoapIn" />
+      <wsdl:output message="tns:SearchItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <wsdl:input message="tns:GetItemDataSoapIn" />
+      <wsdl:output message="tns:GetItemDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDetails">
+      <wsdl:input message="tns:GetPriceDetailsSoapIn" />
+      <wsdl:output message="tns:GetPriceDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrugPriceChangeLog">
+      <wsdl:input message="tns:SearchDrugPriceChangeLogSoapIn" />
+      <wsdl:output message="tns:SearchDrugPriceChangeLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchINSCAR">
+      <wsdl:input message="tns:SearchINSCARSoapIn" />
+      <wsdl:output message="tns:SearchINSCARSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchAddress">
+      <wsdl:input message="tns:SearchAddressSoapIn" />
+      <wsdl:output message="tns:SearchAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberData">
+      <wsdl:input message="tns:GetPrescriberDataSoapIn" />
+      <wsdl:output message="tns:GetPrescriberDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugData">
+      <wsdl:input message="tns:GetDrugDataSoapIn" />
+      <wsdl:output message="tns:GetDrugDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLog">
+      <wsdl:input message="tns:GetDrugPriceChangeLogSoapIn" />
+      <wsdl:output message="tns:GetDrugPriceChangeLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLogByDate">
+      <wsdl:input message="tns:GetDrugPriceChangeLogByDateSoapIn" />
+      <wsdl:output message="tns:GetDrugPriceChangeLogByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetINSCARData">
+      <wsdl:input message="tns:GetINSCARDataSoapIn" />
+      <wsdl:output message="tns:GetINSCARDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPCCData">
+      <wsdl:input message="tns:GetPCCDataSoapIn" />
+      <wsdl:output message="tns:GetPCCDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input message="tns:GetAddressSoapIn" />
+      <wsdl:output message="tns:GetAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescDetails">
+      <wsdl:input message="tns:GetPrescDetailsSoapIn" />
+      <wsdl:output message="tns:GetPrescDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberDetailsSPI">
+      <wsdl:input message="tns:GetPrescriberDetailsSPISoapIn" />
+      <wsdl:output message="tns:GetPrescriberDetailsSPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByFNameSPI">
+      <wsdl:input message="tns:GetPresDetailByFNameSPISoapIn" />
+      <wsdl:output message="tns:GetPresDetailByFNameSPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByLNameSPI">
+      <wsdl:input message="tns:GetPresDetailByLNameSPISoapIn" />
+      <wsdl:output message="tns:GetPresDetailByLNameSPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPCredentials">
+      <wsdl:input message="tns:GetFTPCredentialsSoapIn" />
+      <wsdl:output message="tns:GetFTPCredentialsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedGuideFileName">
+      <wsdl:input message="tns:GetMedGuideFileNameSoapIn" />
+      <wsdl:output message="tns:GetMedGuideFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriberSPI">
+      <wsdl:input message="tns:SearchPrescriberSPISoapIn" />
+      <wsdl:output message="tns:SearchPrescriberSPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPriceUpateHistroy">
+      <wsdl:input message="tns:AddPriceUpateHistroySoapIn" />
+      <wsdl:output message="tns:AddPriceUpateHistroySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceUpdateHistory">
+      <wsdl:input message="tns:GetPriceUpdateHistorySoapIn" />
+      <wsdl:output message="tns:GetPriceUpdateHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticatePharmacy">
+      <wsdl:input message="tns:AuthenticatePharmacySoapIn" />
+      <wsdl:output message="tns:AuthenticatePharmacySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesCount">
+      <wsdl:input message="tns:GetPrime_MessagesCountSoapIn" />
+      <wsdl:output message="tns:GetPrime_MessagesCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesInfo">
+      <wsdl:input message="tns:GetPrime_MessagesInfoSoapIn" />
+      <wsdl:output message="tns:GetPrime_MessagesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_LatestMessagesInfo">
+      <wsdl:input message="tns:GetPrime_LatestMessagesInfoSoapIn" />
+      <wsdl:output message="tns:GetPrime_LatestMessagesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusPrime_PharmacyMessagesInfo">
+      <wsdl:input message="tns:UpdateStatusPrime_PharmacyMessagesInfoSoapIn" />
+      <wsdl:output message="tns:UpdateStatusPrime_PharmacyMessagesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnTimeInterval">
+      <wsdl:input message="tns:fnTimeIntervalSoapIn" />
+      <wsdl:output message="tns:fnTimeIntervalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnCheckIfNPIExists">
+      <wsdl:input message="tns:fnCheckIfNPIExistsSoapIn" />
+      <wsdl:output message="tns:fnCheckIfNPIExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetPharmacyInfo">
+      <wsdl:input message="tns:fnGetPharmacyInfoSoapIn" />
+      <wsdl:output message="tns:fnGetPharmacyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetCustomerID">
+      <wsdl:input message="tns:fnGetCustomerIDSoapIn" />
+      <wsdl:output message="tns:fnGetCustomerIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllProducts">
+      <wsdl:input message="tns:fnGetAllProductsSoapIn" />
+      <wsdl:output message="tns:fnGetAllProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnCustomerProducts">
+      <wsdl:input message="tns:fnCustomerProductsSoapIn" />
+      <wsdl:output message="tns:fnCustomerProductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fnGetQuery">
+      <wsdl:input message="tns:fnGetQuerySoapIn" />
+      <wsdl:output message="tns:fnGetQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConnectionStatus">
+      <soap:operation soapAction="http://tempuri.org/GetConnectionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriber">
+      <soap:operation soapAction="http://tempuri.org/SearchPrescriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrug">
+      <soap:operation soapAction="http://tempuri.org/SearchDrug" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchItem">
+      <soap:operation soapAction="http://tempuri.org/SearchItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <soap:operation soapAction="http://tempuri.org/GetItemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDetails">
+      <soap:operation soapAction="http://tempuri.org/GetPriceDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrugPriceChangeLog">
+      <soap:operation soapAction="http://tempuri.org/SearchDrugPriceChangeLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchINSCAR">
+      <soap:operation soapAction="http://tempuri.org/SearchINSCAR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAddress">
+      <soap:operation soapAction="http://tempuri.org/SearchAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberData">
+      <soap:operation soapAction="http://tempuri.org/GetPrescriberData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugData">
+      <soap:operation soapAction="http://tempuri.org/GetDrugData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLog">
+      <soap:operation soapAction="http://tempuri.org/GetDrugPriceChangeLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLogByDate">
+      <soap:operation soapAction="http://tempuri.org/GetDrugPriceChangeLogByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetINSCARData">
+      <soap:operation soapAction="http://tempuri.org/GetINSCARData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCCData">
+      <soap:operation soapAction="http://tempuri.org/GetPCCData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/GetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescDetails">
+      <soap:operation soapAction="http://tempuri.org/GetPrescDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberDetailsSPI">
+      <soap:operation soapAction="http://tempuri.org/GetPrescriberDetailsSPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByFNameSPI">
+      <soap:operation soapAction="http://tempuri.org/GetPresDetailByFNameSPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByLNameSPI">
+      <soap:operation soapAction="http://tempuri.org/GetPresDetailByLNameSPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPCredentials">
+      <soap:operation soapAction="http://tempuri.org/GetFTPCredentials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedGuideFileName">
+      <soap:operation soapAction="http://tempuri.org/GetMedGuideFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriberSPI">
+      <soap:operation soapAction="http://tempuri.org/SearchPrescriberSPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPriceUpateHistroy">
+      <soap:operation soapAction="http://tempuri.org/AddPriceUpateHistroy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceUpdateHistory">
+      <soap:operation soapAction="http://tempuri.org/GetPriceUpdateHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticatePharmacy">
+      <soap:operation soapAction="http://tempuri.org/AuthenticatePharmacy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesCount">
+      <soap:operation soapAction="http://tempuri.org/GetPrime_MessagesCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPrime_MessagesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_LatestMessagesInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPrime_LatestMessagesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusPrime_PharmacyMessagesInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateStatusPrime_PharmacyMessagesInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnTimeInterval">
+      <soap:operation soapAction="http://tempuri.org/fnTimeInterval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnCheckIfNPIExists">
+      <soap:operation soapAction="http://tempuri.org/fnCheckIfNPIExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetPharmacyInfo">
+      <soap:operation soapAction="http://tempuri.org/fnGetPharmacyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetCustomerID">
+      <soap:operation soapAction="http://tempuri.org/fnGetCustomerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/fnGetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnCustomerProducts">
+      <soap:operation soapAction="http://tempuri.org/fnCustomerProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetQuery">
+      <soap:operation soapAction="http://tempuri.org/fnGetQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConnectionStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetConnectionStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriber">
+      <soap12:operation soapAction="http://tempuri.org/SearchPrescriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrug">
+      <soap12:operation soapAction="http://tempuri.org/SearchDrug" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchItem">
+      <soap12:operation soapAction="http://tempuri.org/SearchItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <soap12:operation soapAction="http://tempuri.org/GetItemData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDrugPriceChangeLog">
+      <soap12:operation soapAction="http://tempuri.org/SearchDrugPriceChangeLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchINSCAR">
+      <soap12:operation soapAction="http://tempuri.org/SearchINSCAR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchAddress">
+      <soap12:operation soapAction="http://tempuri.org/SearchAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberData">
+      <soap12:operation soapAction="http://tempuri.org/GetPrescriberData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugData">
+      <soap12:operation soapAction="http://tempuri.org/GetDrugData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLog">
+      <soap12:operation soapAction="http://tempuri.org/GetDrugPriceChangeLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugPriceChangeLogByDate">
+      <soap12:operation soapAction="http://tempuri.org/GetDrugPriceChangeLogByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetINSCARData">
+      <soap12:operation soapAction="http://tempuri.org/GetINSCARData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPCCData">
+      <soap12:operation soapAction="http://tempuri.org/GetPCCData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetPrescDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrescriberDetailsSPI">
+      <soap12:operation soapAction="http://tempuri.org/GetPrescriberDetailsSPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByFNameSPI">
+      <soap12:operation soapAction="http://tempuri.org/GetPresDetailByFNameSPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPresDetailByLNameSPI">
+      <soap12:operation soapAction="http://tempuri.org/GetPresDetailByLNameSPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPCredentials">
+      <soap12:operation soapAction="http://tempuri.org/GetFTPCredentials" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedGuideFileName">
+      <soap12:operation soapAction="http://tempuri.org/GetMedGuideFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPrescriberSPI">
+      <soap12:operation soapAction="http://tempuri.org/SearchPrescriberSPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPriceUpateHistroy">
+      <soap12:operation soapAction="http://tempuri.org/AddPriceUpateHistroy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceUpdateHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceUpdateHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticatePharmacy">
+      <soap12:operation soapAction="http://tempuri.org/AuthenticatePharmacy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesCount">
+      <soap12:operation soapAction="http://tempuri.org/GetPrime_MessagesCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_MessagesInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPrime_MessagesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrime_LatestMessagesInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPrime_LatestMessagesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusPrime_PharmacyMessagesInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStatusPrime_PharmacyMessagesInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnTimeInterval">
+      <soap12:operation soapAction="http://tempuri.org/fnTimeInterval" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnCheckIfNPIExists">
+      <soap12:operation soapAction="http://tempuri.org/fnCheckIfNPIExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetPharmacyInfo">
+      <soap12:operation soapAction="http://tempuri.org/fnGetPharmacyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetCustomerID">
+      <soap12:operation soapAction="http://tempuri.org/fnGetCustomerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetAllProducts">
+      <soap12:operation soapAction="http://tempuri.org/fnGetAllProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnCustomerProducts">
+      <soap12:operation soapAction="http://tempuri.org/fnCustomerProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fnGetQuery">
+      <soap12:operation soapAction="http://tempuri.org/fnGetQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.0.77:83/Prime.SearchService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.0.77:83/Prime.SearchService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

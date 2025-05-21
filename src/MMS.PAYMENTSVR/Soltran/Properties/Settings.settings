@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Solutran.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Soltran_com_solutranservices_s3globaltest_S3Auth" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://s3globaltest.solutranservices.com/MessagingServicev4/S3Auth.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

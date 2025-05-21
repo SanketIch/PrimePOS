@@ -1,0 +1,82 @@
+﻿<Window x:Class="FirstMileTest.Views.FrmReturns"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstMileTest.Views"
+        xmlns:VM ="clr-namespace:FirstMileTest.ViewModel"
+        mc:Ignorable="d"
+        Title="FrmReturns" Height="751" Width="663">
+
+    <Window.DataContext>
+        <VM:ReturnViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="#FF94AAF5" Margin="0,0,2,0">
+        <!--Amount-->
+        <Label x:Name="lblAmt" Content="_Amount" Margin="10,25,0,0" Target="{Binding ElementName=txtAmount}" HorizontalAlignment="Left" Width="85" Height="26" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtAmount" Margin="138,25,0,0" TextWrapping="Wrap"
+                 Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="173" Height="26" VerticalAlignment="Top" />
+
+
+        <!--Trans Type List-->
+        <Label x:Name="lblTransType" Content="_Type" Margin="10,72,0,0" Target="{Binding ElementName=cmbTransTypeList}" HorizontalAlignment="Left" Width="85" Height="26" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbTransTypeList" HorizontalAlignment="Left" Height="26" Margin="138,72,0,0" VerticalAlignment="Top" Width="173"
+                  ItemsSource="{Binding TransTypeList, Mode=OneTime}"
+                  SelectedItem="{Binding TransType,ValidatesOnDataErrors=True}"
+                  />
+
+        <!--Order ID-->
+
+        <Label x:Name="lblOrderID" Content="_Order ID" Margin="10,109,0,0" RenderTransformOrigin="0.992,0.463" Target="{Binding ElementName=txtOrderID}" HorizontalAlignment="Left" Width="85" Height="25" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtOrderID" Margin="138,109,0,0" TextWrapping="Wrap"
+                         Text="{Binding OrderID, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="173" Height="25" VerticalAlignment="Top" />
+
+        <!--Transaction ID-->
+        <Label x:Name="lblTransID" Content="_Transaction ID" Margin="10,151,0,0" RenderTransformOrigin="0.992,0.463" Target="{Binding ElementName=txtTransID}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+        <TextBox x:Name="txtTransID" Margin="138,151,0,0" TextWrapping="Wrap" RenderTransformOrigin="0.407,1.647"
+                         Text="{Binding TransactionID,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Width="173" Height="25" VerticalAlignment="Top" />
+
+
+
+        <!--Result -->
+        <TextBox x:Name="txtResult" HorizontalAlignment="Right" Margin="0,20.506,10,10" TextWrapping="Wrap"  Width="298" Background="White" IsReadOnly="True"
+                   Text="{Binding Result}" />
+
+        <!--Process Button-->
+        <Button x:Name="btnProcess" Style="{StaticResource GlobalRoundButtonTemplate}" Content="Process" Margin="84,0,0,25"
+                Command="{Binding ButtonCommand}" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="149"/>
+        <Label x:Name="lblTransSubType" Content="_SubType" Margin="10,190,0,0" Target="{Binding ElementName=cmbTransSubTypeList}" HorizontalAlignment="Left" Width="85" Height="26" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbTransSubTypeList" HorizontalAlignment="Left" Height="26" Margin="138,192,0,0" VerticalAlignment="Top" Width="173"
+            ItemsSource="{Binding TransSubTypeList, Mode=OneTime}"
+            SelectedItem="{Binding TransSubType, ValidatesOnDataErrors=True}"
+                  />
+        <Grid Margin="17,239,345,242">
+            <Label x:Name="lblFsaTotal" Content="Total FSA" HorizontalAlignment="Left" Height="25" Margin="10,19,0,0" VerticalAlignment="Top" Width="86"/>
+            <TextBox x:Name="txtFSATotal" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding TotalFSAAmount, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="111" Margin="124,23,0,0"/>
+
+            <Label x:Name="lblFsaRx" Content="Rx Amount" HorizontalAlignment="Left" Height="25" Margin="10,62,0,0" VerticalAlignment="Top" Width="86"/>
+            <TextBox x:Name="txtFSARx" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding RxAmount, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="111" Margin="124,66,0,0"/>
+
+            <Label x:Name="lblFsaClinic" Content="Clinic Amount" HorizontalAlignment="Left" Height="25" Margin="10,100,0,0" VerticalAlignment="Top" Width="86"/>
+            <TextBox x:Name="txtFSAclinic" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding ClinicAmount, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="111" Margin="124,104,0,0"/>
+
+            <Label x:Name="lblFsaDental" Content="Denatl Amount" HorizontalAlignment="Left" Height="25" Margin="10,147,0,0" VerticalAlignment="Top" Width="96"/>
+            <TextBox x:Name="txtFSADental" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding DentalAmount, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="111" Margin="124,151,0,0"/>
+
+            <Label x:Name="lblFsaVision" Content="Vision Amount" HorizontalAlignment="Left" Height="25" Margin="10,187,0,0" VerticalAlignment="Top" Width="96"/>
+            <TextBox x:Name="txtFSAVision" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding VisionAmount, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="111" Margin="124,189,0,0"/>
+
+        </Grid>
+
+        <GroupBox x:Name="groupBox1" Style="{StaticResource GlobalRoundGrpBoxTemplate}" Header="GroupBox" HorizontalAlignment="Left" Margin="10,508,0,0" VerticalAlignment="Top" Height="127" Width="301">
+            <Grid Height="107" Margin="0,10,0,0" VerticalAlignment="Top" Width="291">
+                <Label x:Name="lblEbtSubType" Content="EBT Sub Type" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cmbSubtype" HorizontalAlignment="Left" Margin="126,10,0,0" ItemsSource="{Binding EBTSubTypeList, Mode=OneTime}" SelectedItem="{Binding EBTSubType}"
+                          VerticalAlignment="Top" Width="155" Height="26"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

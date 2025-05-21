@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAppName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHiddenInstallableProductList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAppName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHiddenInstallableProductListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHiddenInstallableProductListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InSertLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AppName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PharmNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AppVersion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CurrentDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InSertLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InSertLogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHiddenInstallableProductListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHiddenInstallableProductList" />
+  </wsdl:message>
+  <wsdl:message name="GetHiddenInstallableProductListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHiddenInstallableProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="InSertLogSoapIn">
+    <wsdl:part name="parameters" element="tns:InSertLog" />
+  </wsdl:message>
+  <wsdl:message name="InSertLogSoapOut">
+    <wsdl:part name="parameters" element="tns:InSertLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MmsUPdateServiceSoap">
+    <wsdl:operation name="GetProductList">
+      <wsdl:input message="tns:GetProductListSoapIn" />
+      <wsdl:output message="tns:GetProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenInstallableProductList">
+      <wsdl:input message="tns:GetHiddenInstallableProductListSoapIn" />
+      <wsdl:output message="tns:GetHiddenInstallableProductListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InSertLog">
+      <wsdl:input message="tns:InSertLogSoapIn" />
+      <wsdl:output message="tns:InSertLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MmsUPdateServiceSoap" type="tns:MmsUPdateServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductList">
+      <soap:operation soapAction="http://tempuri.org/GetProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenInstallableProductList">
+      <soap:operation soapAction="http://tempuri.org/GetHiddenInstallableProductList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InSertLog">
+      <soap:operation soapAction="http://tempuri.org/InSertLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MmsUPdateServiceSoap12" type="tns:MmsUPdateServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductList">
+      <soap12:operation soapAction="http://tempuri.org/GetProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHiddenInstallableProductList">
+      <soap12:operation soapAction="http://tempuri.org/GetHiddenInstallableProductList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InSertLog">
+      <soap12:operation soapAction="http://tempuri.org/InSertLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MmsUPdateService">
+    <wsdl:port name="MmsUPdateServiceSoap" binding="tns:MmsUPdateServiceSoap">
+      <soap:address location="http://localhost:4134/MMSUpdater/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MmsUPdateServiceSoap12" binding="tns:MmsUPdateServiceSoap12">
+      <soap12:address location="http://localhost:4134/MMSUpdater/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

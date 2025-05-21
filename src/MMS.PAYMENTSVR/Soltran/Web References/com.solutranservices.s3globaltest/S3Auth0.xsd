@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Solutran.S3.Service.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Solutran.S3.Service.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Solutran.S3.Common.Entities.Messaging" />
+  <xs:complexType name="Request">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Solutran.S3.Common.Entities.Messaging" minOccurs="0" name="TransInfo" nillable="true" type="q1:TransInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="Response">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Solutran.S3.Common.Entities.Messaging" minOccurs="0" name="TransInfo" nillable="true" type="q2:TransInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+</xs:schema>

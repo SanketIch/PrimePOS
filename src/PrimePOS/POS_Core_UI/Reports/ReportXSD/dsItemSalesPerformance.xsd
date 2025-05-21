@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsItemSalesPerformance" targetNamespace="http://tempuri.org/dsItemSalesPerformance.xsd" xmlns:mstns="http://tempuri.org/dsItemSalesPerformance.xsd" xmlns="http://tempuri.org/dsItemSalesPerformance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsItemSalesPerformance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsItemSalesPerformance" msprop:Generator_DataSetName="dsItemSalesPerformance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msprop:Generator_UserColumnName="ItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDescription" msprop:Generator_UserColumnName="ItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VendorName" msprop:Generator_UserColumnName="VendorName" msprop:Generator_ColumnPropNameInRow="VendorName" msprop:Generator_ColumnVarNameInTable="columnVendorName" msprop:Generator_ColumnPropNameInTable="VendorNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DeptName" msprop:Generator_UserColumnName="DeptName" msprop:Generator_ColumnPropNameInRow="DeptName" msprop:Generator_ColumnVarNameInTable="columnDeptName" msprop:Generator_ColumnPropNameInTable="DeptNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Jan1" msprop:Generator_UserColumnName="Jan1" msprop:Generator_ColumnVarNameInTable="columnJan1" msprop:Generator_ColumnPropNameInRow="Jan1" msprop:Generator_ColumnPropNameInTable="Jan1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Feb1" msdata:Caption="Feb3" msprop:Generator_UserColumnName="Feb1" msprop:Generator_ColumnVarNameInTable="columnFeb1" msprop:Generator_ColumnPropNameInRow="Feb1" msprop:Generator_ColumnPropNameInTable="Feb1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Mar1" msdata:Caption="March3" msprop:Generator_UserColumnName="Mar1" msprop:Generator_ColumnVarNameInTable="columnMar1" msprop:Generator_ColumnPropNameInRow="Mar1" msprop:Generator_ColumnPropNameInTable="Mar1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Apr1" msdata:Caption="April3" msprop:Generator_UserColumnName="Apr1" msprop:Generator_ColumnVarNameInTable="columnApr1" msprop:Generator_ColumnPropNameInRow="Apr1" msprop:Generator_ColumnPropNameInTable="Apr1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="May1" msdata:Caption="May3" msprop:Generator_UserColumnName="May1" msprop:Generator_ColumnVarNameInTable="columnMay1" msprop:Generator_ColumnPropNameInRow="May1" msprop:Generator_ColumnPropNameInTable="May1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jun1" msdata:Caption="June3" msprop:Generator_UserColumnName="Jun1" msprop:Generator_ColumnVarNameInTable="columnJun1" msprop:Generator_ColumnPropNameInRow="Jun1" msprop:Generator_ColumnPropNameInTable="Jun1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jul1" msdata:Caption="July3" msprop:Generator_UserColumnName="Jul1" msprop:Generator_ColumnVarNameInTable="columnJul1" msprop:Generator_ColumnPropNameInRow="Jul1" msprop:Generator_ColumnPropNameInTable="Jul1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Aug1" msdata:Caption="Aug3" msprop:Generator_UserColumnName="Aug1" msprop:Generator_ColumnVarNameInTable="columnAug1" msprop:Generator_ColumnPropNameInRow="Aug1" msprop:Generator_ColumnPropNameInTable="Aug1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Sep1" msdata:Caption="Sept3" msprop:Generator_UserColumnName="Sep1" msprop:Generator_ColumnVarNameInTable="columnSep1" msprop:Generator_ColumnPropNameInRow="Sep1" msprop:Generator_ColumnPropNameInTable="Sep1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Oct1" msdata:Caption="Oct3" msprop:Generator_UserColumnName="Oct1" msprop:Generator_ColumnVarNameInTable="columnOct1" msprop:Generator_ColumnPropNameInRow="Oct1" msprop:Generator_ColumnPropNameInTable="Oct1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Nov1" msdata:Caption="Nov3" msprop:Generator_UserColumnName="Nov1" msprop:Generator_ColumnVarNameInTable="columnNov1" msprop:Generator_ColumnPropNameInRow="Nov1" msprop:Generator_ColumnPropNameInTable="Nov1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Dec1" msdata:Caption="Dec3" msprop:Generator_UserColumnName="Dec1" msprop:Generator_ColumnVarNameInTable="columnDec1" msprop:Generator_ColumnPropNameInRow="Dec1" msprop:Generator_ColumnPropNameInTable="Dec1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jan2" msdata:Caption="Jan3" msprop:Generator_UserColumnName="Jan2" msprop:Generator_ColumnVarNameInTable="columnJan2" msprop:Generator_ColumnPropNameInRow="Jan2" msprop:Generator_ColumnPropNameInTable="Jan2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Feb2" msdata:Caption="Feb3" msprop:Generator_UserColumnName="Feb2" msprop:Generator_ColumnVarNameInTable="columnFeb2" msprop:Generator_ColumnPropNameInRow="Feb2" msprop:Generator_ColumnPropNameInTable="Feb2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Mar2" msdata:Caption="March3" msprop:Generator_UserColumnName="Mar2" msprop:Generator_ColumnVarNameInTable="columnMar2" msprop:Generator_ColumnPropNameInRow="Mar2" msprop:Generator_ColumnPropNameInTable="Mar2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Apr2" msdata:Caption="April3" msprop:Generator_UserColumnName="Apr2" msprop:Generator_ColumnVarNameInTable="columnApr2" msprop:Generator_ColumnPropNameInRow="Apr2" msprop:Generator_ColumnPropNameInTable="Apr2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="May2" msdata:Caption="May3" msprop:Generator_UserColumnName="May2" msprop:Generator_ColumnVarNameInTable="columnMay2" msprop:Generator_ColumnPropNameInRow="May2" msprop:Generator_ColumnPropNameInTable="May2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jun2" msdata:Caption="June3" msprop:Generator_UserColumnName="Jun2" msprop:Generator_ColumnVarNameInTable="columnJun2" msprop:Generator_ColumnPropNameInRow="Jun2" msprop:Generator_ColumnPropNameInTable="Jun2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jul2" msdata:Caption="July3" msprop:Generator_UserColumnName="Jul2" msprop:Generator_ColumnVarNameInTable="columnJul2" msprop:Generator_ColumnPropNameInRow="Jul2" msprop:Generator_ColumnPropNameInTable="Jul2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Aug2" msdata:Caption="Aug3" msprop:Generator_UserColumnName="Aug2" msprop:Generator_ColumnVarNameInTable="columnAug2" msprop:Generator_ColumnPropNameInRow="Aug2" msprop:Generator_ColumnPropNameInTable="Aug2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Sep2" msdata:Caption="Sept3" msprop:Generator_UserColumnName="Sep2" msprop:Generator_ColumnVarNameInTable="columnSep2" msprop:Generator_ColumnPropNameInRow="Sep2" msprop:Generator_ColumnPropNameInTable="Sep2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Oct2" msdata:Caption="Oct3" msprop:Generator_UserColumnName="Oct2" msprop:Generator_ColumnVarNameInTable="columnOct2" msprop:Generator_ColumnPropNameInRow="Oct2" msprop:Generator_ColumnPropNameInTable="Oct2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Nov2" msdata:Caption="Nov3" msprop:Generator_UserColumnName="Nov2" msprop:Generator_ColumnVarNameInTable="columnNov2" msprop:Generator_ColumnPropNameInRow="Nov2" msprop:Generator_ColumnPropNameInTable="Nov2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Dec2" msdata:Caption="Dec3" msprop:Generator_UserColumnName="Dec2" msprop:Generator_ColumnVarNameInTable="columnDec2" msprop:Generator_ColumnPropNameInRow="Dec2" msprop:Generator_ColumnPropNameInTable="Dec2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jan3" msprop:Generator_UserColumnName="Jan3" msprop:Generator_ColumnVarNameInTable="columnJan3" msprop:Generator_ColumnPropNameInRow="Jan3" msprop:Generator_ColumnPropNameInTable="Jan3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Feb3" msprop:Generator_UserColumnName="Feb3" msprop:Generator_ColumnVarNameInTable="columnFeb3" msprop:Generator_ColumnPropNameInRow="Feb3" msprop:Generator_ColumnPropNameInTable="Feb3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Mar3" msprop:Generator_UserColumnName="Mar3" msprop:Generator_ColumnVarNameInTable="columnMar3" msprop:Generator_ColumnPropNameInRow="Mar3" msprop:Generator_ColumnPropNameInTable="Mar3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Apr3" msprop:Generator_UserColumnName="Apr3" msprop:Generator_ColumnVarNameInTable="columnApr3" msprop:Generator_ColumnPropNameInRow="Apr3" msprop:Generator_ColumnPropNameInTable="Apr3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="May3" msprop:Generator_UserColumnName="May3" msprop:Generator_ColumnVarNameInTable="columnMay3" msprop:Generator_ColumnPropNameInRow="May3" msprop:Generator_ColumnPropNameInTable="May3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jun3" msprop:Generator_UserColumnName="Jun3" msprop:Generator_ColumnVarNameInTable="columnJun3" msprop:Generator_ColumnPropNameInRow="Jun3" msprop:Generator_ColumnPropNameInTable="Jun3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Jul3" msprop:Generator_UserColumnName="Jul3" msprop:Generator_ColumnVarNameInTable="columnJul3" msprop:Generator_ColumnPropNameInRow="Jul3" msprop:Generator_ColumnPropNameInTable="Jul3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Aug3" msprop:Generator_UserColumnName="Aug3" msprop:Generator_ColumnVarNameInTable="columnAug3" msprop:Generator_ColumnPropNameInRow="Aug3" msprop:Generator_ColumnPropNameInTable="Aug3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Sep3" msprop:Generator_UserColumnName="Sep3" msprop:Generator_ColumnVarNameInTable="columnSep3" msprop:Generator_ColumnPropNameInRow="Sep3" msprop:Generator_ColumnPropNameInTable="Sep3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Oct3" msprop:Generator_UserColumnName="Oct3" msprop:Generator_ColumnVarNameInTable="columnOct3" msprop:Generator_ColumnPropNameInRow="Oct3" msprop:Generator_ColumnPropNameInTable="Oct3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Nov3" msprop:Generator_UserColumnName="Nov3" msprop:Generator_ColumnVarNameInTable="columnNov3" msprop:Generator_ColumnPropNameInRow="Nov3" msprop:Generator_ColumnPropNameInTable="Nov3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Dec3" msprop:Generator_UserColumnName="Dec3" msprop:Generator_ColumnVarNameInTable="columnDec3" msprop:Generator_ColumnPropNameInRow="Dec3" msprop:Generator_ColumnPropNameInTable="Dec3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Total1" msprop:Generator_UserColumnName="Total1" msprop:Generator_ColumnPropNameInRow="Total1" msprop:Generator_ColumnVarNameInTable="columnTotal1" msprop:Generator_ColumnPropNameInTable="Total1Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Total2" msprop:Generator_UserColumnName="Total2" msprop:Generator_ColumnVarNameInTable="columnTotal2" msprop:Generator_ColumnPropNameInRow="Total2" msprop:Generator_ColumnPropNameInTable="Total2Column" type="xs:double" minOccurs="0" />
+              <xs:element name="Total3" msprop:Generator_UserColumnName="Total3" msprop:Generator_ColumnVarNameInTable="columnTotal3" msprop:Generator_ColumnPropNameInRow="Total3" msprop:Generator_ColumnPropNameInTable="Total3Column" type="xs:double" minOccurs="0" />
+              <xs:element name="SubDeptName" msprop:Generator_UserColumnName="SubDeptName" msprop:Generator_ColumnPropNameInRow="SubDeptName" msprop:Generator_ColumnVarNameInTable="columnSubDeptName" msprop:Generator_ColumnPropNameInTable="SubDeptNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

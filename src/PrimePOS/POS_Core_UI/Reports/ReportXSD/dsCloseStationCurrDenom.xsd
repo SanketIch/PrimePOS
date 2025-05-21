@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCloseStationCurrDenom" targetNamespace="http://tempuri.org/dsCloseStationCurrDenom.xsd" xmlns:mstns="http://tempuri.org/dsCloseStationCurrDenom.xsd" xmlns="http://tempuri.org/dsCloseStationCurrDenom.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POSQLConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="POSQLConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.POS_Core_UI.Properties.Settings.GlobalReference.Default.POSQLConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCloseStationCurrDenom" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsCloseStationCurrDenom" msprop:Generator_UserDSName="dsCloseStationCurrDenom">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CloseStationCurrDenom" msprop:Generator_UserTableName="CloseStationCurrDenom" msprop:Generator_RowEvArgName="CloseStationCurrDenomRowChangeEvent" msprop:Generator_TableVarName="tableCloseStationCurrDenom" msprop:Generator_TablePropName="CloseStationCurrDenom" msprop:Generator_RowDeletingName="CloseStationCurrDenomRowDeleting" msprop:Generator_RowChangingName="CloseStationCurrDenomRowChanging" msprop:Generator_RowDeletedName="CloseStationCurrDenomRowDeleted" msprop:Generator_RowEvHandlerName="CloseStationCurrDenomRowChangeEventHandler" msprop:Generator_TableClassName="CloseStationCurrDenomDataTable" msprop:Generator_RowChangedName="CloseStationCurrDenomRowChanged" msprop:Generator_RowClassName="CloseStationCurrDenomRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CurrencyDescription" msprop:Generator_ColumnVarNameInTable="columnCurrencyDescription" msprop:Generator_ColumnPropNameInRow="CurrencyDescription" msprop:Generator_ColumnPropNameInTable="CurrencyDescriptionColumn" msprop:Generator_UserColumnName="CurrencyDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="IsCoin" msprop:Generator_ColumnVarNameInTable="columnIsCoin" msprop:Generator_ColumnPropNameInRow="IsCoin" msprop:Generator_ColumnPropNameInTable="IsCoinColumn" msprop:Generator_UserColumnName="IsCoin" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalValue" msprop:Generator_ColumnVarNameInTable="columnTotalValue" msprop:Generator_ColumnPropNameInRow="TotalValue" msprop:Generator_ColumnPropNameInTable="TotalValueColumn" msprop:Generator_UserColumnName="TotalValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" msprop:Generator_UserColumnName="CloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="StationID" msprop:Generator_ColumnVarNameInTable="columnStationID" msprop:Generator_ColumnPropNameInRow="StationID" msprop:Generator_ColumnPropNameInTable="StationIDColumn" msprop:Generator_UserColumnName="StationID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

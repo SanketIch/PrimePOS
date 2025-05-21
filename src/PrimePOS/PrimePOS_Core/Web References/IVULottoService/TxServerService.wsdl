@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://txserver.sut.softekpr.com/1" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TxServerService" targetNamespace="http://txserver.sut.softekpr.com/1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://txserver.sut.softekpr.com/1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="requestIVULoto" type="tns:requestIVULoto" />
+      <xs:element name="requestIVULotoResponse" type="tns:requestIVULotoResponse" />
+      <xs:element name="requestTxInfo" type="tns:requestTxInfo" />
+      <xs:element name="requestTxInfoResponse" type="tns:requestTxInfoResponse" />
+      <xs:complexType name="requestIVULoto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="transaction" type="tns:transaction" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaction">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="merchantId" type="xs:string" />
+          <xs:element minOccurs="0" name="municipalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="stateTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="subTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="tenderType" type="tns:tenderType" />
+          <xs:element minOccurs="0" name="terminalId" type="xs:string" />
+          <xs:element minOccurs="0" name="terminalPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="total" type="xs:decimal" />
+          <xs:element minOccurs="0" name="txDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="txType" type="tns:txType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestIVULotoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IVULoto" type="tns:ivuLotoData" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ivuLotoData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ivuLoto" type="xs:string" />
+          <xs:element minOccurs="0" name="controlNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="drawNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="drawDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="status" type="tns:txPosResponseStatus" />
+          <xs:element minOccurs="0" name="errorDetail" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestTxInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:txInfoRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txInfoRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="merchantId" type="xs:string" />
+          <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="terminalId" type="xs:string" />
+          <xs:element minOccurs="0" name="terminalPassword" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestTxInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:txInfoResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorDetail" type="xs:string" />
+          <xs:element name="txCount" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="transactions" type="tns:txInfo" />
+          <xs:element minOccurs="0" name="status" type="tns:txInfoResponseStatus" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="controlNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="drawDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="drawNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="ivuLottoNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="municipalTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="stateTax" type="xs:decimal" />
+          <xs:element minOccurs="0" name="subTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" name="tenderType" type="tns:tenderType" />
+          <xs:element minOccurs="0" name="total" type="xs:decimal" />
+          <xs:element minOccurs="0" name="transactionDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="transactionType" type="tns:txType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="tenderType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="CASH" />
+          <xs:enumeration value="CREDIT" />
+          <xs:enumeration value="DEBIT" />
+          <xs:enumeration value="EBT" />
+          <xs:enumeration value="ATH" />
+          <xs:enumeration value="UNSPECIFIED_CARD" />
+          <xs:enumeration value="UNKNOWN" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="txType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SALE" />
+          <xs:enumeration value="REFUND" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="txPosResponseStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SUCCESS" />
+          <xs:enumeration value="AUTHENTICATION_FAILED" />
+          <xs:enumeration value="MISSING_PARAMETERS" />
+          <xs:enumeration value="INVALID_PARAMETERS" />
+          <xs:enumeration value="SERVER_ERROR" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="txInfoResponseStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SUCCESS" />
+          <xs:enumeration value="AUTHENTICATION_FAILED" />
+          <xs:enumeration value="MISSING_PARAMETERS" />
+          <xs:enumeration value="INVALID_PARAMETERS" />
+          <xs:enumeration value="SERVER_ERROR" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="requestTxInfoResponse">
+    <wsdl:part name="parameters" element="tns:requestTxInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestIVULoto">
+    <wsdl:part name="parameters" element="tns:requestIVULoto" />
+  </wsdl:message>
+  <wsdl:message name="requestTxInfo">
+    <wsdl:part name="parameters" element="tns:requestTxInfo" />
+  </wsdl:message>
+  <wsdl:message name="requestIVULotoResponse">
+    <wsdl:part name="parameters" element="tns:requestIVULotoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TxServer">
+    <wsdl:operation name="requestIVULoto">
+      <wsdl:input name="requestIVULoto" message="tns:requestIVULoto" />
+      <wsdl:output name="requestIVULotoResponse" message="tns:requestIVULotoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="requestTxInfo">
+      <wsdl:input name="requestTxInfo" message="tns:requestTxInfo" />
+      <wsdl:output name="requestTxInfoResponse" message="tns:requestTxInfoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TxServerServiceSoapBinding" type="tns:TxServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestIVULoto">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requestIVULoto">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requestIVULotoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestTxInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="requestTxInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="requestTxInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TxServerService">
+    <wsdl:port name="TxServerPort" binding="tns:TxServerServiceSoapBinding">
+      <soap:address location="https://txportwst.txhubpr.com/txserver/1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

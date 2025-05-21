@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09e81351-18fa-4fdd-bbf5-6d5ea196563d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://s3globaltest.solutranservices.com/MessagingServicev4/S3Auth.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="S3Auth.wsdl" MetadataType="Wsdl" ID="aefa8ee2-7416-4f4e-a28e-1c585c9a064a" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?wsdl" />
+    <MetadataFile FileName="S3Auth.xsd" MetadataType="Schema" ID="0b5ac702-e083-4193-8f3a-67b11d77ef5c" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd0" />
+    <MetadataFile FileName="S3Auth1.xsd" MetadataType="Schema" ID="c0c3a0fb-9b2d-436f-aaf0-3bdbfc84c996" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd2" />
+    <MetadataFile FileName="S3Auth2.xsd" MetadataType="Schema" ID="defec7d6-8400-458e-ac2b-c62edabc0caf" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd4" />
+    <MetadataFile FileName="S3Auth.disco" MetadataType="Disco" ID="bc593134-4a61-4c17-9a3c-0c698b800d82" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?disco" />
+    <MetadataFile FileName="S3Auth3.xsd" MetadataType="Schema" ID="a15bfe35-9f29-4510-96d8-8ac99cb0df15" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd1" />
+    <MetadataFile FileName="S3Auth4.xsd" MetadataType="Schema" ID="f1679f39-5a50-4499-a6b3-e94eca89f817" SourceId="1" SourceUrl="https://s3globaltest.solutranservices.com/MessagingServiceV4/S3Auth.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

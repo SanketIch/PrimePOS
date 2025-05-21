@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Solutran.S3.Common.Entities.Messaging" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Solutran.S3.Common.Entities.Messaging" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TransInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APLVer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BalanceInfo" nillable="true" type="tns:ArrayOfBalanceInfo" />
+      <xs:element minOccurs="0" name="BusDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardInfo" nillable="true" type="tns:ArrayOfCardInfo" />
+      <xs:element minOccurs="0" name="CurrCde" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountInfo" nillable="true" type="tns:ArrayOfDiscountInfo" />
+      <xs:element minOccurs="0" name="LocalDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductInfo" nillable="true" type="tns:ArrayOfProductInfo" />
+      <xs:element minOccurs="0" name="RecptInfo" nillable="true" type="tns:ArrayOfRecptInfo" />
+      <xs:element minOccurs="0" name="RetaiLoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3CardCt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3MerchID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3ProdCt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3PurAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="S3RecMess" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3TranID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermTranID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalTaxAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalTranAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalTranDisc" type="xs:decimal" />
+      <xs:element minOccurs="0" name="VerType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransInfo" nillable="true" type="tns:TransInfo" />
+  <xs:complexType name="ArrayOfBalanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceInfo" nillable="true" type="tns:BalanceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBalanceInfo" nillable="true" type="tns:ArrayOfBalanceInfo" />
+  <xs:complexType name="BalanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BalVal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BarCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrdinalNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromoCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromoShort" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BalanceInfo" nillable="true" type="tns:BalanceInfo" />
+  <xs:complexType name="ArrayOfCardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CardInfo" nillable="true" type="tns:CardInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCardInfo" nillable="true" type="tns:ArrayOfCardInfo" />
+  <xs:complexType name="CardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarcodeData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CVV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POSDataCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CardInfo" nillable="true" type="tns:CardInfo" />
+  <xs:complexType name="ArrayOfDiscountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiscountInfo" nillable="true" type="tns:DiscountInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscountInfo" nillable="true" type="tns:ArrayOfDiscountInfo" />
+  <xs:complexType name="DiscountInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppDiscAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DeptNr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscDescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrdinalNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProdCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscountInfo" nillable="true" type="tns:DiscountInfo" />
+  <xs:complexType name="ArrayOfProductInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductInfo" nillable="true" type="tns:ProductInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductInfo" nillable="true" type="tns:ArrayOfProductInfo" />
+  <xs:complexType name="ProductInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Depart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NonS3DiscAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OrdinalNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProdCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProdLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurQuantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchAmt" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QuantityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxAmt" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductInfo" nillable="true" type="tns:ProductInfo" />
+  <xs:complexType name="ArrayOfRecptInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecptInfo" nillable="true" type="tns:RecptInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecptInfo" nillable="true" type="tns:ArrayOfRecptInfo" />
+  <xs:complexType name="RecptInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessOrdinalNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S3RecptMess" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecptInfo" nillable="true" type="tns:RecptInfo" />
+</xs:schema>

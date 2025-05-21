@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUserEntrdStnClose" targetNamespace="http://tempuri.org/dsUserEntrdStnClose.xsd" xmlns:mstns="http://tempuri.org/dsUserEntrdStnClose.xsd" xmlns="http://tempuri.org/dsUserEntrdStnClose.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUserEntrdStnClose" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsUserEntrdStnClose" msprop:Generator_DataSetName="dsUserEntrdStnClose">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserEntrdStnClose" msprop:Generator_UserTableName="UserEntrdStnClose" msprop:Generator_RowDeletedName="UserEntrdStnCloseRowDeleted" msprop:Generator_RowChangedName="UserEntrdStnCloseRowChanged" msprop:Generator_RowClassName="UserEntrdStnCloseRow" msprop:Generator_RowChangingName="UserEntrdStnCloseRowChanging" msprop:Generator_RowEvArgName="UserEntrdStnCloseRowChangeEvent" msprop:Generator_RowEvHandlerName="UserEntrdStnCloseRowChangeEventHandler" msprop:Generator_TableClassName="UserEntrdStnCloseDataTable" msprop:Generator_TableVarName="tableUserEntrdStnClose" msprop:Generator_RowDeletingName="UserEntrdStnCloseRowDeleting" msprop:Generator_TablePropName="UserEntrdStnClose">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StationCloseId" msprop:Generator_UserColumnName="StationCloseId" msprop:Generator_ColumnVarNameInTable="columnStationCloseId" msprop:Generator_ColumnPropNameInRow="StationCloseId" msprop:Generator_ColumnPropNameInTable="StationCloseIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CurrencyDenomId" msprop:Generator_UserColumnName="CurrencyDenomId" msprop:Generator_ColumnVarNameInTable="columnCurrencyDenomId" msprop:Generator_ColumnPropNameInRow="CurrencyDenomId" msprop:Generator_ColumnPropNameInTable="CurrencyDenomIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CurrencyDescription" msprop:Generator_UserColumnName="CurrencyDescription" msprop:Generator_ColumnVarNameInTable="columnCurrencyDescription" msprop:Generator_ColumnPropNameInRow="CurrencyDescription" msprop:Generator_ColumnPropNameInTable="CurrencyDescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_UserColumnName="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalValue" msprop:Generator_UserColumnName="TotalValue" msprop:Generator_ColumnVarNameInTable="columnTotalValue" msprop:Generator_ColumnPropNameInRow="TotalValue" msprop:Generator_ColumnPropNameInTable="TotalValueColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CurrencyType" msprop:Generator_UserColumnName="CurrencyType" msprop:Generator_ColumnVarNameInTable="columnCurrencyType" msprop:Generator_ColumnPropNameInRow="CurrencyType" msprop:Generator_ColumnPropNameInTable="CurrencyTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_UserColumnName="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DefCDStartBalance" msprop:Generator_UserColumnName="DefCDStartBalance" msprop:Generator_ColumnPropNameInRow="DefCDStartBalance" msprop:Generator_ColumnVarNameInTable="columnDefCDStartBalance" msprop:Generator_ColumnPropNameInTable="DefCDStartBalanceColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

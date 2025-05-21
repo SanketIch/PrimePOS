@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSalesCompare" targetNamespace="http://tempuri.org/dsSalesCompare.xsd" xmlns:mstns="http://tempuri.org/dsSalesCompare.xsd" xmlns="http://tempuri.org/dsSalesCompare.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSalesCompare" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsSalesCompare" msprop:Generator_DataSetName="dsSalesCompare">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SalesCompare" msprop:Generator_UserTableName="SalesCompare" msprop:Generator_RowDeletedName="SalesCompareRowDeleted" msprop:Generator_RowChangedName="SalesCompareRowChanged" msprop:Generator_RowClassName="SalesCompareRow" msprop:Generator_RowChangingName="SalesCompareRowChanging" msprop:Generator_RowEvArgName="SalesCompareRowChangeEvent" msprop:Generator_RowEvHandlerName="SalesCompareRowChangeEventHandler" msprop:Generator_TableClassName="SalesCompareDataTable" msprop:Generator_TableVarName="tableSalesCompare" msprop:Generator_RowDeletingName="SalesCompareRowDeleting" msprop:Generator_TablePropName="SalesCompare">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msprop:Generator_UserColumnName="ItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDescription" msprop:Generator_UserColumnName="ItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="First_Filter_Criteria" msprop:Generator_UserColumnName="First_Filter_Criteria" msprop:Generator_ColumnPropNameInRow="First_Filter_Criteria" msprop:Generator_ColumnVarNameInTable="columnFirst_Filter_Criteria" msprop:Generator_ColumnPropNameInTable="First_Filter_CriteriaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Second_Filter_Criteria" msprop:Generator_UserColumnName="Second_Filter_Criteria" msprop:Generator_ColumnPropNameInRow="Second_Filter_Criteria" msprop:Generator_ColumnVarNameInTable="columnSecond_Filter_Criteria" msprop:Generator_ColumnPropNameInTable="Second_Filter_CriteriaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Third_Filter_Criteria" msprop:Generator_UserColumnName="Third_Filter_Criteria" msprop:Generator_ColumnVarNameInTable="columnThird_Filter_Criteria" msprop:Generator_ColumnPropNameInRow="Third_Filter_Criteria" msprop:Generator_ColumnPropNameInTable="Third_Filter_CriteriaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DepartmentName" msprop:Generator_UserColumnName="DepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SubDepartmentName" msprop:Generator_UserColumnName="SubDepartmentName" msprop:Generator_ColumnPropNameInRow="SubDepartmentName" msprop:Generator_ColumnVarNameInTable="columnSubDepartmentName" msprop:Generator_ColumnPropNameInTable="SubDepartmentNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

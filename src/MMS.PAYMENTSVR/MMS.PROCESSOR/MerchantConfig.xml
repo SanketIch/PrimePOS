@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CONFIGURATION>
+  <USER_ID>777700001486</USER_ID>
+  <CARDINFO>
+    <CARDS>
+      <CARD card_type="CARD">
+        <MERCH_NUM>777700001486</MERCH_NUM>
+        <PROCESSOR_ID>HPS</PROCESSOR_ID>
+      </CARD>
+    </CARDS>
+  </CARDINFO>
+  <PAYMENT_SERVER>localhost</PAYMENT_SERVER>
+  <!--"192.168.1.20"-->
+  <PORT_NO>11000</PORT_NO>
+  <PAYMENTCLIENT>C:\ProgramData\CAM Commerce Solutions\X-Charge\Application\XCharge.exe</PAYMENTCLIENT>
+  <PAYMENTRESULTFILE>C:\ResultFile.txt</PAYMENTRESULTFILE>
+  <APPLICATIONNAME>PrimePOS</APPLICATIONNAME>
+  <XCCLIENTUITITLE>Prime POS CC Processing</XCCLIENTUITITLE>
+  <!--"Required to be set if HPS processor"-->
+  <LICENSEID>20681</LICENSEID>
+  <SITEID>20678</SITEID>
+  <DEVICEID>1413817</DEVICEID>
+  <URL>https://posgateway.cert.secureexchange.net/Hps.Exchange.PosGateway/PosGatewayService.asmx</URL>
+  <VCBIN>VisaHealthcareBins.xml</VCBIN>
+  <MCBIN>MCHealthcareBins.xml</MCBIN>
+</CONFIGURATION>

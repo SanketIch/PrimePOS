@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStnCloseCash" targetNamespace="http://tempuri.org/dsStnCloseCash.xsd" xmlns:mstns="http://tempuri.org/dsStnCloseCash.xsd" xmlns="http://tempuri.org/dsStnCloseCash.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStnCloseCash" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsStnCloseCash" msprop:Generator_DataSetName="dsStnCloseCash">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StnCloseCash" msprop:Generator_UserTableName="StnCloseCash" msprop:Generator_RowDeletedName="StnCloseCashRowDeleted" msprop:Generator_RowChangedName="StnCloseCashRowChanged" msprop:Generator_RowClassName="StnCloseCashRow" msprop:Generator_RowChangingName="StnCloseCashRowChanging" msprop:Generator_RowEvArgName="StnCloseCashRowChangeEvent" msprop:Generator_RowEvHandlerName="StnCloseCashRowChangeEventHandler" msprop:Generator_TableClassName="StnCloseCashDataTable" msprop:Generator_TableVarName="tableStnCloseCash" msprop:Generator_RowDeletingName="StnCloseCashRowDeleting" msprop:Generator_TablePropName="StnCloseCash">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StationCloseId" msprop:Generator_UserColumnName="StationCloseId" msprop:Generator_ColumnPropNameInRow="StationCloseId" msprop:Generator_ColumnVarNameInTable="columnStationCloseId" msprop:Generator_ColumnPropNameInTable="StationCloseIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="StationId" msprop:Generator_UserColumnName="StationId" msprop:Generator_ColumnPropNameInRow="StationId" msprop:Generator_ColumnVarNameInTable="columnStationId" msprop:Generator_ColumnPropNameInTable="StationIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UserId" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_UserColumnName="CloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TransAmount" msprop:Generator_UserColumnName="TransAmount" msprop:Generator_ColumnPropNameInRow="TransAmount" msprop:Generator_ColumnVarNameInTable="columnTransAmount" msprop:Generator_ColumnPropNameInTable="TransAmountColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Cash_x0020_Entered" msprop:Generator_UserColumnName="Cash Entered" msprop:Generator_ColumnVarNameInTable="columnCash_Entered" msprop:Generator_ColumnPropNameInRow="Cash_Entered" msprop:Generator_ColumnPropNameInTable="Cash_EnteredColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

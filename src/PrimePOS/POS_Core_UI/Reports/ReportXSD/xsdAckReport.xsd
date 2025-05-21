@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsdAckReport" targetNamespace="http://tempuri.org/xsdAckReport.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/xsdAckReport.xsd" xmlns:mstns="http://tempuri.org/xsdAckReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AckPODetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OrderNo" type="xs:string" />
+        <xs:element name="OrderDate" type="xs:dateTime" />
+        <xs:element name="VendCode" type="xs:string" />
+        <xs:element name="ItemId" type="xs:string" />
+        <xs:element name="Description" type="xs:string" />
+        <xs:element name="ItemID" type="xs:string" />
+        <xs:element name="Qty" type="xs:int" />
+        <xs:element name="AckQty" type="xs:int" />
+        <xs:element name="Price" type="xs:decimal" />
+        <xs:element name="cost" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="FirstMileTest.Views.frmSignature"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstMileTest.Views"
+        xmlns:VM ="clr-namespace:FirstMileTest.ViewModel"
+        mc:Ignorable="d"
+        Title="frmSignature" Height="300" Width="459.664">
+    
+    
+    <Grid Background="#FF94AAF5" Margin="0,0,2,0">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="179" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" RenderTransformOrigin="0.01,0.078"
+               Source="{Binding Image}"
+               />
+
+    </Grid>
+</Window>
