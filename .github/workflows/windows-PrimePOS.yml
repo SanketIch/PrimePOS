@@ -26,7 +26,7 @@ jobs:
         uses: NuGet/setup-nuget@v1
     
       - name: Restore NuGet packages
-        run: nuget restore PrimePOS.sln      
+        run: nuget restore src/PrimePOS/PrimePOS.sln     
   
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
@@ -34,7 +34,7 @@ jobs:
           languages: csharp
   
       - name: Build code
-        run: msbuild PrimePOS.sln /p:Configuration=Release
+        run: msbuild src/PrimePOS/PrimePOS.sln /p:Configuration=Release
   
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3  
