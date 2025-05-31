@@ -323,7 +323,6 @@
     <EmbeddedResource Include="frmWaitCursor.resx">
       <DependentUpon>frmWaitCursor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="WaitAnimator.resx">
       <DependentUpon>WaitAnimator.cs</DependentUpon>
     </EmbeddedResource>
