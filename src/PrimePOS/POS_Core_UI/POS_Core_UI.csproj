@@ -2106,7 +2106,6 @@
     <EmbeddedResource Include="frmViewNoSaleTransaction.resx">
       <DependentUpon>frmViewNoSaleTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Reports\ReportsUI\frmInvShrinkage.resx">
       <DependentUpon>frmInvShrinkage.cs</DependentUpon>
     </EmbeddedResource>
