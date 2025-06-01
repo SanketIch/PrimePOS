@@ -34,7 +34,7 @@ jobs:
           languages: csharp
   
       - name: Build code
-        run: msbuild src/PrimePOS/PrimePOS.sln /p:Configuration=Release
+        run: msbuild src/PrimePOS/PrimePOS.sln /t:Rebuild /p:Configuration=Debug
   
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3  
