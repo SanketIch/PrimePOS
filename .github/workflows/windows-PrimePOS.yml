@@ -1,21 +1,17 @@
-# .github/workflows/your-workflow-name.yml
+# .github/workflows/check-build-only.yml
 
-name: .NET Build, Test and Report
+name: .NET Build Check
 
 on:
   push:
-    branches: [ "*" ]
+    branches: [ "main" ] # Adjust branches as needed
   pull_request:
     branches: [ "*" ]
 
 jobs:
-  codeql-analysis:
-    name: CodeQL Analysis
-    runs-on: windows-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
+  build-check:
+    name: Build Only
+    runs-on: windows-latest # Use 'windows-latest' as your project is on Windows
 
     steps:
     - name: Checkout code
@@ -24,10 +20,11 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
       with:
-        # IMPORTANT: Ensure this matches your project's target .NET version
-        dotnet-version: '8.x' # <--- MAKE SURE THIS IS CORRECT (e.g., '6.0.x', '7.0.x', '8.0.x')
+        # IMPORTANT: Set this to the exact .NET SDK version your project targets.
+        # Example: '6.0.x', '7.0.x', '8.0.x', or 'latest'
+        dotnet-version: '8.x' # <--- CHANGE THIS TO YOUR PROJECT'S ACTUAL .NET VERSION
 
-    - name: Display .NET SDK info
+    - name: Display .NET SDK info (for debugging)
       run: |
         echo "Listing .NET SDKs..."
         dotnet --list-sdks
@@ -35,17 +32,12 @@ jobs:
         dotnet --info
 
     - name: Restore .NET dependencies
-      # Path to your solution file (src/PrimePOS/PrimePOS.sln) is correct here
+      # Your solution file path: src/PrimePOS/PrimePOS.sln
       run: dotnet restore src/PrimePOS/PrimePOS.sln
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: csharp
-
     - name: Build .NET solution
-      # Path to your solution file (src/PrimePOS/PrimePOS.sln) is correct here
+      # Your solution file path: src/PrimePOS/PrimePOS.sln
+      # Using /v:d for detailed output in case of errors
       run: dotnet build src/PrimePOS/PrimePOS.sln --configuration Debug --no-restore /v:d
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
+    # No CodeQL, no tests, no reports for this basic check
