@@ -1,3 +1,5 @@
+# .github/workflows/your-workflow-name.yml
+
 name: .NET Build, Test and Report
 
 on:
@@ -14,32 +16,16 @@ jobs:
       actions: read
       contents: read
       security-events: write
-      # Add this line if you need to upload build artifacts later
-      # packages: write
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # The 'microsoft/setup-msbuild' and 'NuGet/setup-nuget' actions
-    # are often not strictly necessary when using 'dotnet restore' and 'dotnet build',
-    # as the .NET SDK (which we'll set up below) includes its own build tools.
-    # I've commented them out, but you can uncomment if you find issues.
-    # - name: Setup MSBuild
-    #   uses: microsoft/setup-msbuild@v1.3.1
-
-    # - name: Setup NuGet
-    #   uses: NuGet/setup-nuget@v1
-
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v4
       with:
-        # Specify the .NET SDK version your project targets.
-        # Examples: '6.0.x', '7.0.x', '8.0.x'
-        # Crucial: Replace '8.x' with the actual major version your project uses.
-        dotnet-version: '8.x' # <--- IMPORTANT: Change this to your project's target .NET version
-
-    # --- Debugging Steps Added Below ---
+        # IMPORTANT: Ensure this matches your project's target .NET version
+        dotnet-version: '8.x' # <--- MAKE SURE THIS IS CORRECT (e.g., '6.0.x', '7.0.x', '8.0.x')
 
     - name: Display .NET SDK info
       run: |
@@ -48,11 +34,8 @@ jobs:
         echo "Displaying .NET environment info..."
         dotnet --info
 
-    # --- End Debugging Steps ---
-
     - name: Restore .NET dependencies
-      # Use dotnet restore for modern .NET projects
-      # This handles NuGet packages and project references.
+      # Path to your solution file (src/PrimePOS/PrimePOS.sln) is correct here
       run: dotnet restore src/PrimePOS/PrimePOS.sln
 
     - name: Initialize CodeQL
@@ -61,20 +44,8 @@ jobs:
         languages: csharp
 
     - name: Build .NET solution
-      # Use dotnet build for modern .NET projects.
-      # '--no-restore' prevents a second restore attempt if 'dotnet restore' already ran.
-      # '/v:d' for detailed output in case of build failure.
+      # Path to your solution file (src/PrimePOS/PrimePOS.sln) is correct here
       run: dotnet build src/PrimePOS/PrimePOS.sln --configuration Debug --no-restore /v:d
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
-
-    # Optional: Add a step to upload build artifacts if you want to inspect them
-    # - name: Upload Build Artifacts
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: PrimePOS-build-output
-    #     # Adjust this path to your actual build output directory, e.g.,
-    #     # src/PrimePOS/bin/Debug/net8.0/ if it's a .NET 8 project.
-    #     path: src/PrimePOS/bin/Debug/
-    #     # retention-days: 7 # Optional: How long to keep the artifact
