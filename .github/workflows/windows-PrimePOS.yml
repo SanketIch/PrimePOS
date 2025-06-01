@@ -1,43 +1,75 @@
-# .github/workflows/check-build-only.yml
+# .github/workflows/check-net-framework-48-build.yml
 
-name: .NET Build Check
+name: .NET Framework 4.8 Build Check
 
 on:
   push:
-    branches: [ "main" ] # Adjust branches as needed
+    branches: [ "main", "master", "develop", "feature/**" ] # Adjust branches as needed
   pull_request:
     branches: [ "*" ]
 
 jobs:
   build-check:
-    name: Build Only
-    runs-on: windows-latest # Use 'windows-latest' as your project is on Windows
+    name: Build Only (.NET Framework 4.8)
+    runs-on: windows-latest # .NET Framework is Windows-specific
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v4
+    - name: Setup MSBuild
+      # This action ensures MSBuild (which comes with Visual Studio Build Tools)
+      # is correctly configured in the PATH. GitHub-hosted runners usually have it.
+      uses: microsoft/setup-msbuild@v1.3.1
       with:
-        # IMPORTANT: Set this to the exact .NET SDK version your project targets.
-        # Example: '6.0.x', '7.0.x', '8.0.x', or 'latest'
-        dotnet-version: '8.x' # <--- CHANGE THIS TO YOUR PROJECT'S ACTUAL .NET VERSION
+        # You can specify a version if needed, but 'latest' usually works for 4.8
+        msbuild-version: 'latest' # Or a specific version like '17.x'
 
-    - name: Display .NET SDK info (for debugging)
+    - name: Setup NuGet
+      # This action sets up the NuGet CLI.
+      uses: NuGet/setup-nuget@v1
+      with:
+        # You can specify a version if needed
+        version: 'latest' # Or a specific version like '6.x.x'
+
+    # --- Debugging Steps (Highly Recommended) ---
+    - name: Display MSBuild and NuGet info
       run: |
-        echo "Listing .NET SDKs..."
-        dotnet --list-sdks
-        echo "Displaying .NET environment info..."
-        dotnet --info
+        echo "MSBuild version:"
+        msbuild -version
+        echo "NuGet CLI version:"
+        nuget help
 
-    - name: Restore .NET dependencies
-      # Your solution file path: src/PrimePOS/PrimePOS.sln
-      run: dotnet restore src/PrimePOS/PrimePOS.sln
+    - name: Verify .NET Framework Developer Pack
+      # This step helps confirm the correct .NET Framework targeting pack is available.
+      # While 'windows-latest' usually has many installed, this can be a good check.
+      run: |
+        # List installed .NET Framework Targeting Packs (Developer Packs)
+        # This command checks standard installation paths for .NET Framework.
+        # It's not exhaustive but can give an indication.
+        echo "Checking for .NET Framework 4.8 Developer Pack..."
+        Get-ChildItem 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name
+        # You can also check for specific registry keys if you need more robust verification
+        # For example: (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
+        # A release value of 528040 indicates .NET Framework 4.8 installed
+        $netFxRelease = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
+        if ($netFxRelease -ge 528040) {
+            echo ".NET Framework 4.8 or later is installed."
+        } else {
+            echo ".NET Framework 4.8 or later is NOT detected via registry."
+        }
+    # --- End Debugging Steps ---
 
-    - name: Build .NET solution
-      # Your solution file path: src/PrimePOS/PrimePOS.sln
-      # Using /v:d for detailed output in case of errors
-      run: dotnet build src/PrimePOS/PrimePOS.sln --configuration Debug --no-restore /v:d
+    - name: Restore NuGet packages
+      # This uses the NuGet CLI to restore packages for your solution.
+      # Path: src/PrimePOS/PrimePOS.sln
+      run: nuget restore src/PrimePOS/PrimePOS.sln
 
-    # No CodeQL, no tests, no reports for this basic check
+    - name: Build .NET Framework solution
+      # This uses MSBuild to build your .NET Framework solution.
+      # /p:Configuration=Debug is already there.
+      # /v:d for detailed output in case of errors.
+      run: msbuild src/PrimePOS/PrimePOS.sln /t:Rebuild /p:Configuration=Debug /v:d
+      # If you need to specify a specific .NET Framework version for MSBuild
+      # you might sometimes add /p:TargetFrameworkVersion=v4.8
+      # but usually, the project file itself dictates this.
