@@ -1,75 +1,40 @@
-# .github/workflows/check-net-framework-48-build.yml
-
-name: .NET Framework 4.8 Build Check
+name: .NET Build, Test and Report
 
 on:
   push:
-    branches: [ "main", "master", "develop", "feature/**" ] # Adjust branches as needed
+    branches: [ "*" ]
   pull_request:
     branches: [ "*" ]
 
 jobs:
-  build-check:
-    name: Build Only (.NET Framework 4.8)
-    runs-on: windows-latest # .NET Framework is Windows-specific
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup MSBuild
-      # This action ensures MSBuild (which comes with Visual Studio Build Tools)
-      # is correctly configured in the PATH. GitHub-hosted runners usually have it.
-      uses: microsoft/setup-msbuild@v1.3.1
-      with:
-        # You can specify a version if needed, but 'latest' usually works for 4.8
-        msbuild-version: 'latest' # Or a specific version like '17.x'
-
-    - name: Setup NuGet
-      # This action sets up the NuGet CLI.
-      uses: NuGet/setup-nuget@v1
-      with:
-        # You can specify a version if needed
-        version: 'latest' # Or a specific version like '6.x.x'
-
-    # --- Debugging Steps (Highly Recommended) ---
-    - name: Display MSBuild and NuGet info
-      run: |
-        echo "MSBuild version:"
-        msbuild -version
-        echo "NuGet CLI version:"
-        nuget help
-
-    - name: Verify .NET Framework Developer Pack
-      # This step helps confirm the correct .NET Framework targeting pack is available.
-      # While 'windows-latest' usually has many installed, this can be a good check.
-      run: |
-        # List installed .NET Framework Targeting Packs (Developer Packs)
-        # This command checks standard installation paths for .NET Framework.
-        # It's not exhaustive but can give an indication.
-        echo "Checking for .NET Framework 4.8 Developer Pack..."
-        Get-ChildItem 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name
-        # You can also check for specific registry keys if you need more robust verification
-        # For example: (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
-        # A release value of 528040 indicates .NET Framework 4.8 installed
-        $netFxRelease = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full').Release
-        if ($netFxRelease -ge 528040) {
-            echo ".NET Framework 4.8 or later is installed."
-        } else {
-            echo ".NET Framework 4.8 or later is NOT detected via registry."
-        }
-    # --- End Debugging Steps ---
-
-    - name: Restore NuGet packages
-      # This uses the NuGet CLI to restore packages for your solution.
-      # Path: src/PrimePOS/PrimePOS.sln
-      run: nuget restore src/PrimePOS/PrimePOS.sln
-
-    - name: Build .NET Framework solution
-      # This uses MSBuild to build your .NET Framework solution.
-      # /p:Configuration=Debug is already there.
-      # /v:d for detailed output in case of errors.
-      run: msbuild src/PrimePOS/PrimePOS.sln /t:Rebuild /p:Configuration=Debug /v:d
-      # If you need to specify a specific .NET Framework version for MSBuild
-      # you might sometimes add /p:TargetFrameworkVersion=v4.8
-      # but usually, the project file itself dictates this.
+  codeql-analysis:
+      name: CodeQL Analysis
+      runs-on: windows-latest
+      permissions:
+        actions: read
+        contents: read
+        security-events: write
+  
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+  
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.3.1
+  
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1
+    
+      - name: Restore NuGet packages
+        run: nuget restore ./src/PrimePOS/PrimePOS.sln     
+  
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+  
+      - name: Build code
+        run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
+  
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3  
