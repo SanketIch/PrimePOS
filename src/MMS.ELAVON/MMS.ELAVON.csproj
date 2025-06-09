@@ -38,7 +38,7 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Interop.AES">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.AES.dll</HintPath>
+      <HintPath>..\..\lib\Interop.AES.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">

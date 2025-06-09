@@ -64,7 +64,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Hps.Exchange.PosGateway.Client">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Hps.Exchange.PosGateway.Client.dll</HintPath>
+      <HintPath>..\..\lib\Hps.Exchange.PosGateway.Client.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.4\lib\net45\NLog.dll</HintPath>

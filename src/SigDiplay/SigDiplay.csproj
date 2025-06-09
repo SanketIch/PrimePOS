@@ -86,7 +86,7 @@
   <ItemGroup>
     <Reference Include="MMSBitCrop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSBitCrop.dll</HintPath>
+      <HintPath>..\..\lib\MMSBitCrop.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>

@@ -48,46 +48,46 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.Device">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\Interop.Device.dll</HintPath>
+      <HintPath>..\..\lib\Interop.Device.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VCONTROLOBJECTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VHELPERLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\Interop.VHELPERLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VHELPERLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="POS.Devices.OPOSMSR, Version=1.13.0.0, Culture=neutral, PublicKeyToken=25db91e28cd23c98, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\POS.Devices.OPOSMSR.dll</HintPath>
+      <HintPath>..\..\lib\POS.Devices.OPOSMSR.dll</HintPath>
     </Reference>
     <Reference Include="POS.Devices.OPOSPINPad, Version=1.13.0.0, Culture=neutral, PublicKeyToken=25db91e28cd23c98, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\POS.Devices.OPOSPINPad.dll</HintPath>
+      <HintPath>..\..\lib\POS.Devices.OPOSPINPad.dll</HintPath>
     </Reference>
     <Reference Include="POS.Devices.OPOSSigCap">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\POS.Devices.OPOSSigCap.dll</HintPath>
+      <HintPath>..\..\lib\POS.Devices.OPOSSigCap.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="POS.Devices.Opos_Constants">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\POS.Devices.Opos_Constants.dll</HintPath>
+      <HintPath>..\..\lib\POS.Devices.Opos_Constants.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />

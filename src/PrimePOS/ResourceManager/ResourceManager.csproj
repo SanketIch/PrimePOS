@@ -46,25 +46,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\PrimePOS_2_0\packages\Unity.5.3.2\lib\net45\CommonServiceLocator.dll</HintPath>
+      <HintPath>..\..\lib\CommonServiceLocator.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
     </Reference>
     <Reference Include="MMSCL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSCL.dll</HintPath>
+      <HintPath>..\..\lib\MMSCL.dll</HintPath>
     </Reference>
     <Reference Include="NativeEncryption">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NativeEncryption.dll</HintPath>
+      <HintPath>..\..\lib\NativeEncryption.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

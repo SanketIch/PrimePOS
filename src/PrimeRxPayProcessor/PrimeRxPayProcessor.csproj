@@ -42,20 +42,20 @@
     <Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\PrimePOS\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\PrimePOS\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\PrimePOS\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

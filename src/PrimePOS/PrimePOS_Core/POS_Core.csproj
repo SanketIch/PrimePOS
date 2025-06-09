@@ -36,14 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ApplicationLogger">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\ApplicationLogger.dll</HintPath>
+      <HintPath>..\..\lib\ApplicationLogger.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\EntityFramework.dll</HintPath>
+      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.Core.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -194,134 +194,134 @@
       <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Interop.AES">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.AES.dll</HintPath>
+      <HintPath>..\..\lib\Interop.AES.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.BLOWFISHCOMLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.BLOWFISHCOMLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.BLOWFISHCOMLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.Device">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.Device.dll</HintPath>
+      <HintPath>..\..\lib\Interop.Device.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EasyByte_Software">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.EasyByte_Software.dll</HintPath>
+      <HintPath>..\..\lib\Interop.EasyByte_Software.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EBFilexWiperLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.EBFilexWiperLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.EBFilexWiperLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.IWshRuntimeLibrary">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.IWshRuntimeLibrary.DLL</HintPath>
+      <HintPath>..\..\lib\Interop.IWshRuntimeLibrary.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.LCC11">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.LCC11.dll</HintPath>
+      <HintPath>..\..\lib\Interop.LCC11.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MessengerAPI">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.MessengerAPI.dll</HintPath>
+      <HintPath>..\..\lib\Interop.MessengerAPI.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSCommLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.MSCommLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.MSCommLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.OposLineDisplay_CCO">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.OposLineDisplay_CCO.dll</HintPath>
+      <HintPath>..\..\lib\Interop.OposLineDisplay_CCO.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.RSACOMDLLLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.RSACOMDLLLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.RSACOMDLLLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEENETLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
+      <HintPath>..\..\lib\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACELib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACELib.DLL</HintPath>
+      <HintPath>..\..\lib\Interop.SCRIPTIFACELib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEUSBLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
+      <HintPath>..\..\lib\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VCONTROLOBJECTLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VHELPERLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.VHELPERLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.VHELPERLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.WMPLib">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Interop.WMPLib.dll</HintPath>
+      <HintPath>..\..\lib\Interop.WMPLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\itextsharp.dll</HintPath>
+      <HintPath>..\..\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Mabry.Barcode">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Mabry.Barcode.dll</HintPath>
+      <HintPath>..\..\lib\Mabry.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="Mabry.Core">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Mabry.Core.dll</HintPath>
+      <HintPath>..\..\lib\Mabry.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.Office.Interop.Excel">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.VisualBasic.Vsa\8.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.Vsa.dll</HintPath>
+      <HintPath>..\..\lib\Microsoft.VisualBasic.Vsa.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MMS.HOST, Version=4.0.0.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMS.HOST.dll</HintPath>
+      <HintPath>..\..\lib\MMS.HOST.dll</HintPath>
     </Reference>
     <Reference Include="MMSBClass, Version=5.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSBClass.dll</HintPath>
+      <HintPath>..\..\lib\MMSBClass.dll</HintPath>
     </Reference>
     <Reference Include="MMSChargeAccount, Version=5.0.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSChargeAccount.dll</HintPath>
+      <HintPath>..\..\lib\MMSChargeAccount.dll</HintPath>
     </Reference>
     <Reference Include="MMSCL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSCL.dll</HintPath>
+      <HintPath>..\..\lib\MMSCL.dll</HintPath>
     </Reference>
     <Reference Include="MMSComponentInfo">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSComponentInfo.dll</HintPath>
+      <HintPath>..\..\lib\MMSComponentInfo.dll</HintPath>
     </Reference>
     <Reference Include="MMSInterfaces">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSInterfaces.dll</HintPath>
+      <HintPath>..\..\lib\MMSInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="NativeEncryption">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NativeEncryption.dll</HintPath>
+      <HintPath>..\..\lib\NativeEncryption.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">

@@ -112,23 +112,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CbDbf">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\CbDbf.dll</HintPath>
+      <HintPath>..\..\lib\CbDbf.dll</HintPath>
     </Reference>
     <Reference Include="Dur">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Dur.dll</HintPath>
+      <HintPath>..\..\lib\Dur.dll</HintPath>
     </Reference>
     <Reference Include="MMSBClass">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSBClass.dll</HintPath>
+      <HintPath>..\..\lib\MMSBClass.dll</HintPath>
     </Reference>
     <Reference Include="MMSCL">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\MMSCL.dll</HintPath>
+      <HintPath>..\..\lib\MMSCL.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Dev\NLog.dll</HintPath>
+      <HintPath>..\..\lib\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>

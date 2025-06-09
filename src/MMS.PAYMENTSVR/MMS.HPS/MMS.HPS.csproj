@@ -78,27 +78,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Hps.Exchange.PosGateway.Client">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Hps.Exchange.PosGateway.Client.dll</HintPath>
+      <HintPath>..\..\lib\Hps.Exchange.PosGateway.Client.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.4\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Rebex.Net.ProxySocket">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\PaymentServer Refs\Rebex.Net.ProxySocket.dll</HintPath>
+      <HintPath>..\..\lib\Rebex.Net.ProxySocket.dll</HintPath>
     </Reference>
     <Reference Include="Rebex.Net.Sftp">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\PaymentServer Refs\Rebex.Net.Sftp.dll</HintPath>
+      <HintPath>..\..\lib\Rebex.Net.Sftp.dll</HintPath>
     </Reference>
     <Reference Include="Rebex.Net.Ssh">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\PaymentServer Refs\Rebex.Net.Ssh.dll</HintPath>
+      <HintPath>..\..\lib\Rebex.Net.Ssh.dll</HintPath>
     </Reference>
     <Reference Include="Rebex.Security">
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\PaymentServer Refs\Rebex.Security.dll</HintPath>
+      <HintPath>..\..\lib\Rebex.Security.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

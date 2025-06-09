@@ -55,16 +55,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>\\mmsmain\MMSProg\PrimePOSRefs 4.0\EntityFramework.dll</HintPath>
+      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>\\mmsmain\MMSProg\PrimePOSRefs 4.0\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\lib\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\PrimeRx\Micro Merchant Systems\MMS Dev Team - PrimeRXDLL\PrimePOSRefs 4.0\VS2019\Release\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.4.4\lib\net45\NLog.dll</HintPath>
