@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.Device">
-      <HintPath>..\..\lib\Interop.Device.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.Device.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VCONTROLOBJECTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
@@ -57,11 +57,11 @@
       <HintPath>..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
-      <HintPath>..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VHELPERLib">
-      <HintPath>..\..\lib\Interop.VHELPERLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VHELPERLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -87,7 +87,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="POS.Devices.Opos_Constants">
-      <HintPath>..\..\lib\POS.Devices.Opos_Constants.dll</HintPath>
+      <HintPath>..\..\..\lib\POS.Devices.Opos_Constants.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />

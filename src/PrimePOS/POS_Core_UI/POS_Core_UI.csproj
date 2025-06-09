@@ -42,7 +42,7 @@
     </Reference>
     <Reference Include="AxInterop.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\AxInterop.Device.dll</HintPath>
+      <HintPath>..\..\..\lib\AxInterop.Device.dll</HintPath>
     </Reference>
     <Reference Include="AxInterop.MSCommLib, Version=1.1.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>

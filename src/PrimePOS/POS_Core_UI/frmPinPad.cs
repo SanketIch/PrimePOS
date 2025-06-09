@@ -91,33 +91,33 @@ namespace POS_Core_UI
             string ppdDataBits = Configuration.CPOSSet.PinPadDataBits;
             string pinDeviceName = Configuration.CPOSSet.PinPadModel;
             
-            switch (pinDeviceName.ToUpper())
-            {
-                case "VERIFONE 1001/1000":
-                    PinPadDevice.Device = Device.DeviceType.ppdVerifone_101;
-                    break;
-                case "IVI EN-CRYPT 2100":
-                    PinPadDevice.Device = Device.DeviceType.ppdIVICheckMate_2100;
-                   break;
-                case "VERIFONE 2000":
-                   PinPadDevice.Device = Device.DeviceType.ppdVerifone_2000;
-                    break;
-                case "VERIFONE EVEREST":
-                   PinPadDevice.Device = Device.DeviceType.ppdVerifone_Everest;
-                   break;
-            }
+            //switch (pinDeviceName.ToUpper())
+            //{
+            //    case "VERIFONE 1001/1000":
+            //        PinPadDevice.Device = Device.DeviceType.ppdVerifone_101;
+            //        break;
+            //    case "IVI EN-CRYPT 2100":
+            //        PinPadDevice.Device = Device.DeviceType.ppdIVICheckMate_2100;
+            //       break;
+            //    case "VERIFONE 2000":
+            //       PinPadDevice.Device = Device.DeviceType.ppdVerifone_2000;
+            //        break;
+            //    case "VERIFONE EVEREST":
+            //       PinPadDevice.Device = Device.DeviceType.ppdVerifone_Everest;
+            //       break;
+            //}
             //Modified by Dharmendra (SRT) on Nov-13-08. Removed Pinpad configuration reading from app.config
             string encryptKey = Configuration.CPOSSet.PinPadKeyEncryptionType;
             //Modified Till Here
-            switch (encryptKey)
-            {
-                case "MS":
-                    PinPadDevice.EncryptMethod = (Device.PinPadManagement)0;
-                    break;
-                case "DUKPT":
-                    PinPadDevice.EncryptMethod = (Device.PinPadManagement)1;
-                    break;
-            }
+            //switch (encryptKey)
+            //{
+            //    case "MS":
+            //        PinPadDevice.EncryptMethod = (Device.PinPadManagement)0;
+            //        break;
+            //    case "DUKPT":
+            //        PinPadDevice.EncryptMethod = (Device.PinPadManagement)1;
+            //        break;
+            //}
             //Modified by Dharmendra (SRT) on Nov-13-08. Removed Pinpad configuration reading from app.config
             //string ppdDispMsg = System.Configuration.ConfigurationManager.AppSettings["PINPAD_DISPMSG"];
             string ppdDispMsg = Configuration.CPOSSet.PinPadDispMesg;
