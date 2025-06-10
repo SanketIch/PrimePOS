@@ -74,23 +74,61 @@
     <Reference Include="EntityFramework">
       <HintPath>..\..\..\lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Infragistics4.Documents.Reports.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Shared.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinChart.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinDataSource.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinEditors.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinGrid.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinSchedule.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinTree.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Reports.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+		<HintPath>..\..\..\lib\Infragistics4.Documents.Reports.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Reports.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Documents.Reports.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Shared.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Shared.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.Misc.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinChart.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinDataSource.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinEditors.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinGrid.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinSchedule.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinTabControl.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinToolbars.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.UltraWinTree.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
+	</Reference>
+	<Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+	  <HintPath>..\..\..\lib\Infragistics4.Win.v15.2.dll</HintPath>
+	</Reference>	
+<Reference Include="Interop.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />										
     <Reference Include="Interop.Device, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -121,7 +159,7 @@
       <HintPath>..\..\..\lib\Messaging.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Identity.Client, Version=4.35.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Identity.Client.4.35.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.Office.Interop.Excel">
@@ -133,13 +171,13 @@
     </Reference>
     <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1774.30, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1774.30\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.TaskScheduler">
       <HintPath>..\..\..\lib\Microsoft.Win32.TaskScheduler.dll</HintPath>
