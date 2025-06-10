@@ -1,4 +1,4 @@
-name: .NET Build Check
+name: .NET Build Checking
 
 on:
   push:
