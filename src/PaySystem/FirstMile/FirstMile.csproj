@@ -48,17 +48,17 @@
   <ItemGroup>
     <Reference Include="ATSSecurePostUILib, Version=1.0.26.0, Culture=neutral, PublicKeyToken=d35b35ad2ad5869b, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\ATSSecurePostUILib.dll</HintPath>
+      <HintPath>..\..\..\lib\ATSSecurePostUILib.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\lib\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.4.6\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\..\lib\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
