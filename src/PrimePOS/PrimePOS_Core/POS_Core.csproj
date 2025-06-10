@@ -36,14 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ApplicationLogger">
-      <HintPath>..\..\lib\ApplicationLogger.dll</HintPath>
+      <HintPath>..\..\..\lib\ApplicationLogger.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\lib\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.Core.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -194,133 +194,133 @@
       <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Interop.AES">
-      <HintPath>..\..\..\lib\Interop.AES.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.AES.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.BLOWFISHCOMLib">
-      <HintPath>..\..\..\lib\Interop.BLOWFISHCOMLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.BLOWFISHCOMLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.Device">
-      <HintPath>..\..\..\lib\Interop.Device.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.Device.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EasyByte_Software">
-      <HintPath>..\..\..\lib\Interop.EasyByte_Software.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.EasyByte_Software.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EBFilexWiperLib">
-      <HintPath>..\..\..\lib\Interop.EBFilexWiperLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.EBFilexWiperLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.IWshRuntimeLibrary">
-      <HintPath>..\..\..\lib\Interop.IWshRuntimeLibrary.DLL</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.IWshRuntimeLibrary.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.LCC11">
-      <HintPath>..\..\..\lib\Interop.LCC11.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.LCC11.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MessengerAPI">
-      <HintPath>..\..\..\lib\Interop.MessengerAPI.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.MessengerAPI.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSCommLib">
-      <HintPath>..\..\..\lib\Interop.MSCommLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.MSCommLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.OposLineDisplay_CCO">
-      <HintPath>..\..\..\lib\Interop.OposLineDisplay_CCO.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.OposLineDisplay_CCO.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.RSACOMDLLLib">
-      <HintPath>..\..\..\lib\Interop.RSACOMDLLLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.RSACOMDLLLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEENETLib">
-      <HintPath>..\..\..\lib\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACELib">
-      <HintPath>..\..\..\lib\Interop.SCRIPTIFACELib.DLL</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACELib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEUSBLib">
-      <HintPath>..\..\..\lib\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VCONTROLOBJECTLib">
-      <HintPath>..\..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
-      <HintPath>..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VHELPERLib">
-      <HintPath>..\..\..\lib\Interop.VHELPERLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.VHELPERLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.WMPLib">
-      <HintPath>..\..\..\lib\Interop.WMPLib.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Interop.WMPLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\lib\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Mabry.Barcode">
-      <HintPath>..\..\lib\Mabry.Barcode.dll</HintPath>
+      <HintPath>..\..\..\lib\Mabry.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="Mabry.Core">
-      <HintPath>..\..\lib\Mabry.Core.dll</HintPath>
+      <HintPath>..\..\..\lib\Mabry.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.Office.Interop.Excel">
-      <HintPath>..\..\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
-      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Microsoft.VisualBasic.Vsa.dll</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.VisualBasic.Vsa.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MMS.HOST, Version=4.0.0.1, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\MMS.HOST.dll</HintPath>
+      <HintPath>..\..\..\lib\MMS.HOST.dll</HintPath>
     </Reference>
     <Reference Include="MMSBClass, Version=5.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\MMSBClass.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSBClass.dll</HintPath>
     </Reference>
     <Reference Include="MMSChargeAccount, Version=5.0.0.5, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\MMSChargeAccount.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSChargeAccount.dll</HintPath>
     </Reference>
     <Reference Include="MMSCL">
-      <HintPath>..\..\lib\MMSCL.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSCL.dll</HintPath>
     </Reference>
     <Reference Include="MMSComponentInfo">
-      <HintPath>..\..\lib\MMSComponentInfo.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSComponentInfo.dll</HintPath>
     </Reference>
     <Reference Include="MMSInterfaces">
-      <HintPath>..\..\lib\MMSInterfaces.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="NativeEncryption">
-      <HintPath>..\..\lib\NativeEncryption.dll</HintPath>
+      <HintPath>..\..\..\lib\NativeEncryption.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\..\..\lib\NLog.dll</HintPath>
+      <HintPath>..\..\..\..\lib\NLog.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>

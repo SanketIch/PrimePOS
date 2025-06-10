@@ -36,17 +36,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
-      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EvertechProcessor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\EvertechProcessor.dll</HintPath>
+      <HintPath>..\..\..\lib\EvertechProcessor.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
-      <HintPath>..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Logging.DLL</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\NLog.dll</HintPath>
+      <HintPath>..\..\..\lib\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

@@ -54,7 +54,7 @@
     <Reference Include="Interop.VCONTROLOBJECTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
       <HintPath>..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
@@ -66,24 +66,24 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\lib\NLog.dll</HintPath>
+      <HintPath>..\..\..\lib\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="POS.Devices.OPOSMSR, Version=1.13.0.0, Culture=neutral, PublicKeyToken=25db91e28cd23c98, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\lib\POS.Devices.OPOSMSR.dll</HintPath>
+      <HintPath>..\..\..\lib\POS.Devices.OPOSMSR.dll</HintPath>
     </Reference>
     <Reference Include="POS.Devices.OPOSPINPad, Version=1.13.0.0, Culture=neutral, PublicKeyToken=25db91e28cd23c98, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\lib\POS.Devices.OPOSPINPad.dll</HintPath>
+      <HintPath>..\..\..\lib\POS.Devices.OPOSPINPad.dll</HintPath>
     </Reference>
     <Reference Include="POS.Devices.OPOSSigCap">
-      <HintPath>..\..\lib\POS.Devices.OPOSSigCap.dll</HintPath>
+      <HintPath>..\..\..\lib\POS.Devices.OPOSSigCap.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="POS.Devices.Opos_Constants">
