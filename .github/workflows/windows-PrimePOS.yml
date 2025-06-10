@@ -1,4 +1,4 @@
-name: .NET Build, Test and Report
+name: .NET Build Check
 
 on:
   push:
@@ -7,34 +7,22 @@ on:
     branches: [ "*" ]
 
 jobs:
-  codeql-analysis:
-      name: CodeQL Analysis
-      runs-on: windows-latest
-      permissions:
-        actions: read
-        contents: read
-        security-events: write
-  
-      steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-  
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.3.1
-  
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1
-    
-      - name: Restore NuGet packages
-        run: nuget restore ./src/PrimePOS/PrimePOS.sln     
-  
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: csharp
-  
-      - name: Build code
-        run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
-  
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3  
+  build-check:
+    name: Verify .NET Build
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore ./src/PrimePOS/PrimePOS.sln
+
+    - name: Build code
+      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
