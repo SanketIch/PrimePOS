@@ -54,15 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gateway">
-      <HintPath>DLLS\Gateway.dll</HintPath>
+      <HintPath>..\..\..\lib\Gateway.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\NLog.dll</HintPath>
+      <HintPath>..\..\..\lib\NLog.dll</HintPath>
     </Reference>
     <Reference Include="RBA_SDK_CS">
-      <HintPath>..\..\lib\RBA_SDK_CS.dll</HintPath>
+      <HintPath>..\..\..\lib\RBA_SDK_CS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
