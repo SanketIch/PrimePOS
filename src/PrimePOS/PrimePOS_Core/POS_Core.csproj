@@ -47,222 +47,222 @@
     </Reference>
     <Reference Include="Infragistics4.Documents.Core.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Core.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Documents.Core.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.Excel.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Excel.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Documents.Excel.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.IO.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.IO.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Documents.IO.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.Reports.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Reports.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Documents.Reports.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Documents.Word.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Documents.Word.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Documents.Word.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Math.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Math.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Math.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Shared.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Shared.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Shared.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.AppStylistSupport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.AppStylistSupport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.AppStylistSupport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.Misc.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.Misc.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.SupportDialogs.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.SupportDialogs.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.SupportDialogs.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinChart.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinDataSource.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinDock.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinDock.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinDock.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinEditors.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGanttView.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGanttView.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGanttView.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGauge.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGauge.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGauge.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.WordWriter.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinGrid.WordWriter.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.WordWriter.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinListBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinListBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinListBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinListView.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinListView.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinListView.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinSchedule.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinSpellChecker.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinSpellChecker.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTree.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2118, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\PrimePOS_2_0\bin\Debug\Infragistics4.Win.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Interop.AES">
-      <HintPath>..\..\..\..\lib\Interop.AES.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.AES.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.BLOWFISHCOMLib">
-      <HintPath>..\..\..\..\lib\Interop.BLOWFISHCOMLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.BLOWFISHCOMLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.Device">
-      <HintPath>..\..\..\..\lib\Interop.Device.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.Device.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EasyByte_Software">
-      <HintPath>..\..\..\..\lib\Interop.EasyByte_Software.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.EasyByte_Software.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.EBFilexWiperLib">
-      <HintPath>..\..\..\..\lib\Interop.EBFilexWiperLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.EBFilexWiperLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.IWshRuntimeLibrary">
-      <HintPath>..\..\..\..\lib\Interop.IWshRuntimeLibrary.DLL</HintPath>
+      <HintPath>..\..\..\lib\Interop.IWshRuntimeLibrary.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.LCC11">
-      <HintPath>..\..\..\..\lib\Interop.LCC11.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.LCC11.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MessengerAPI">
-      <HintPath>..\..\..\..\lib\Interop.MessengerAPI.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.MessengerAPI.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSCommLib">
-      <HintPath>..\..\..\..\lib\Interop.MSCommLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.MSCommLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.OposLineDisplay_CCO">
-      <HintPath>..\..\..\..\lib\Interop.OposLineDisplay_CCO.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.OposLineDisplay_CCO.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.RSACOMDLLLib">
-      <HintPath>..\..\..\..\lib\Interop.RSACOMDLLLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.RSACOMDLLLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEENETLib">
-      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
+      <HintPath>..\..\..\lib\Interop.SCRIPTIFACEENETLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACELib">
-      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACELib.DLL</HintPath>
+      <HintPath>..\..\..\lib\Interop.SCRIPTIFACELib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.SCRIPTIFACEUSBLib">
-      <HintPath>..\..\..\..\lib\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
+      <HintPath>..\..\..\lib\Interop.SCRIPTIFACEUSBLib.DLL</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VCONTROLOBJECTLib">
-      <HintPath>..\..\..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VCONTROLOBJECTLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VFMXSERIESSOLib">
-      <HintPath>..\..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VFMXSERIESSOLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.VHELPERLib">
-      <HintPath>..\..\..\..\lib\Interop.VHELPERLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.VHELPERLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.WMPLib">
-      <HintPath>..\..\..\..\lib\Interop.WMPLib.dll</HintPath>
+      <HintPath>..\..\..\lib\Interop.WMPLib.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="itextsharp">
@@ -320,7 +320,7 @@
       <HintPath>..\..\..\lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
-      <HintPath>..\..\..\..\lib\NLog.dll</HintPath>
+      <HintPath>..\..\..\lib\NLog.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
