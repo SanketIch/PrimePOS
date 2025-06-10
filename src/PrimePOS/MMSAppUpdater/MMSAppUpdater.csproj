@@ -104,134 +104,134 @@
     </Reference>
     <Reference Include="Infragistics4.Math.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Math.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Math.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Shared.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Shared.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Shared.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.AppStylistSupport.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.AppStylistSupport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.AppStylistSupport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.Misc.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.Misc.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.Misc.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.SupportDialogs.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.SupportDialogs.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.SupportDialogs.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinCalcManager.v15.2.FormulaBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinChart.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinChart.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinDataSource.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinDataSource.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinDock.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinDock.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinDock.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinEditors.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinEditors.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinExplorerBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinFormattedText.WordWriter.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGanttView.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGanttView.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGanttView.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGauge.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGauge.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGauge.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.DocumentExport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.ExcelExport.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.WordWriter.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinGrid.WordWriter.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinGrid.WordWriter.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinInkProvider.Ink17.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinListBar.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinListBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinListBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinListView.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinListView.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinListView.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinMaskedEdit.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinPrintPreviewDialog.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinSchedule.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinSchedule.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinSpellChecker.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinSpellChecker.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinStatusBar.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinStatusBar.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabbedMdi.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTabControl.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinToolbars.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTree.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.UltraWinTree.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.v15.2, Version=15.2.20152.2023, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Infragistics4.Win.v15.2.dll</HintPath>
+      <HintPath>..\..\..\lib\Infragistics4.Win.v15.2.dll</HintPath>
     </Reference>
     <Reference Include="MMSCL">
-      <HintPath>..\..\..\..\lib\MMSCL.dll</HintPath>
+      <HintPath>..\..\..\lib\MMSCL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -242,18 +242,18 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Xceed.Compression">
-      <HintPath>..\..\..\..\lib\Xceed.Compression.dll</HintPath>
+      <HintPath>..\..\..\lib\Xceed.Compression.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Compression.Formats">
-      <HintPath>..\..\..\..\lib\Xceed.Compression.Formats.dll</HintPath>
+      <HintPath>..\..\..\lib\Xceed.Compression.Formats.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.FileSystem, Version=3.2.6319.0, Culture=neutral, PublicKeyToken=ba83ff368b7563c6">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Xceed.FileSystem.dll</HintPath>
+      <HintPath>..\..\..\lib\Xceed.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="Xceed.Ftp, Version=3.2.6319.0, Culture=neutral, PublicKeyToken=ba83ff368b7563c6">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Xceed.Ftp.dll</HintPath>
+      <HintPath>..\..\..\lib\Xceed.Ftp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
