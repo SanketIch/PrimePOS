@@ -21,5 +21,14 @@ namespace PrimePOSTestCases
             string message = "Welcome to PrimePOS System";
             Assert.Contains("PrimePOS", message);
         }
+
+        // This is the intentional failure test
+        [Fact]
+        public void IntentionalFailureTest()
+        {
+            int expected = 100;
+            int actual = 50;
+            Assert.Equal(expected, actual);  // This will always fail
+        }
     }
 }
