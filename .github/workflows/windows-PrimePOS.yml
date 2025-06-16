@@ -7,8 +7,8 @@ on:
     branches: [ "*" ]
 
 jobs:
-  build-check:
-    name: Verify .NET Build
+  test-execution:
+    name: Execute Tests
     runs-on: windows-latest
 
     steps:
@@ -24,38 +24,44 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore ./src/PrimePOS/PrimePOS.sln
 
-    - name: Build code
+    - name: Build solution
       run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
 
-  codeql-analysis:
-    name: CodeQL Analysis
-    runs-on: windows-latest
-    needs: build-check  # ensure build-check job completes first
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
+    - name: Install VSTest Console
+      uses: darenm/Setup-VSTest@v1
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    - name: Execute xUnit Tests
+      run: |
+        $testDll = Get-ChildItem -Recurse -Filter "PrimePOSTestCases.dll" | Select-Object -First 1
+        $resultsDir = "TestResults"
+        mkdir $resultsDir
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.3.1
+        vstest.console.exe "$($testDll.FullName)" /Logger:trx /ResultsDirectory:$resultsDir
 
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1
+    - name: Convert TRX to CSV
+      run: |
+        $trxFile = Get-ChildItem -Path "TestResults" -Filter *.trx | Select-Object -First 1
+        $xml = [xml](Get-Content $trxFile.FullName)
+        $testResults = $xml.TestRun.Results.UnitTestResult
 
-    - name: Restore NuGet packages
-      run: nuget restore ./src/PrimePOS/PrimePOS.sln
+        $output = foreach ($test in $testResults) {
+            [PSCustomObject]@{
+                TestName = $test.testName
+                Outcome  = $test.outcome
+                Duration = $test.duration
+            }
+        }
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
+        $output | Export-Csv -Path "TestResults\TestResults.csv" -NoTypeInformation
+
+    - name: Upload TRX Results
+      uses: actions/upload-artifact@v4
       with:
-        languages: csharp
+        name: TestResults_TRX
+        path: TestResults/*.trx
 
-    - name: Build code
-      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
+    - name: Upload CSV Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: TestResults_CSV
+        path: TestResults/TestResults.csv
