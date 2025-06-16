@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLogger", "..\MMS.PAYMENT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBS", "..\NBS\NBS.csproj", "{0BE54D82-F4CA-4730-A259-114BFE9E018F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimePOSTestCases", "PrimePOSTestCases\PrimePOSTestCases.csproj", "{6132381D-6A55-4CA7-8748-20BBB65E2A65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -331,13 +333,21 @@ Global
 		{0BE54D82-F4CA-4730-A259-114BFE9E018F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BE54D82-F4CA-4730-A259-114BFE9E018F}.Release|x86.ActiveCfg = Release|Any CPU
 		{0BE54D82-F4CA-4730-A259-114BFE9E018F}.Release|x86.Build.0 = Release|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Debug|x86.Build.0 = Debug|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Release|x86.ActiveCfg = Release|Any CPU
+		{6132381D-6A55-4CA7-8748-20BBB65E2A65}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45
 		SolutionGuid = {CF263F4F-C7CD-4934-BE18-212FC5FEF7AF}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal
