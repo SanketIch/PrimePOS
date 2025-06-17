@@ -16,6 +16,7 @@ namespace PrimePOSTestCases
         }
 
         [Fact]
+        [Trait("Category", "Critical")]
         public void StringContainsSubstring()
         {
             string message = "Welcome to PrimePOS System";
