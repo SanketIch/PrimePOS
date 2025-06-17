@@ -30,29 +30,8 @@ jobs:
     - name: Install VSTest Console
       uses: darenm/Setup-VSTest@v1
 
-    - name: Execute xUnit Tests
-      run: |
-        $testDll = Get-ChildItem -Recurse -Filter "PrimePOSTestCases.dll" | Select-Object -First 1
-        $resultsDir = "TestResults"
-        mkdir $resultsDir
-
-        vstest.console.exe "$($testDll.FullName)" /Logger:trx /ResultsDirectory:$resultsDir
-
-    - name: Convert TRX to CSV
-      run: |
-        $trxFile = Get-ChildItem -Path "TestResults" -Filter *.trx | Select-Object -First 1
-        $xml = [xml](Get-Content $trxFile.FullName)
-        $testResults = $xml.TestRun.Results.UnitTestResult
-
-        $output = foreach ($test in $testResults) {
-            [PSCustomObject]@{
-                TestName = $test.testName
-                Outcome  = $test.outcome
-                Duration = $test.duration
-            }
-        }
-
-        $output | Export-Csv -Path "TestResults\TestResults.csv" -NoTypeInformation
+    - name: Execute Tests via Script
+      run: pwsh .github/workflows/scripts/Execute_Test_Cases.ps1
 
     - name: Upload TRX Results
       uses: actions/upload-artifact@v4
