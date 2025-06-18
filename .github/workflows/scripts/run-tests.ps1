@@ -22,12 +22,14 @@ foreach ($unitTestResult in $xml.TestRun.Results.UnitTestResult) {
     $testId = $unitTestResult.testId
     $testDefinition = $xml.TestRun.TestDefinitions.UnitTest | Where-Object { $_.id -eq $testId }
 
-    # Check if test has the "Critical" category
+    # Extract Trait from Properties
     $categories = @()
-    if ($testDefinition.TestCategory.TestCategoryItem -is [System.Array]) {
-        $categories = @($testDefinition.TestCategory.TestCategoryItem | ForEach-Object { $_.TestCategory })
-    } elseif ($testDefinition.TestCategory.TestCategoryItem) {
-        $categories = @($testDefinition.TestCategory.TestCategoryItem.TestCategory)
+    if ($testDefinition.Properties) {
+        foreach ($prop in $testDefinition.Properties.Property) {
+            if ($prop.Name -eq "Category" -and $prop.Value -eq "Critical") {
+                $categories += "Critical"
+            }
+        }
     }
 
     $isCritical = "Critical" -in $categories
