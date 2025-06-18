@@ -44,7 +44,7 @@ namespace Elavon
             AddKeyValue();
         }
 
-        private void AddKeyValue()
+        public static void AddKeyValue()
         {
             keyValuePairs.Add(Constant.TRANSTYPE, "0001");
             keyValuePairs.Add(Constant.AMOUNT, "0002");

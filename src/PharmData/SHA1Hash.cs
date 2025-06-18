@@ -6,9 +6,9 @@ namespace PharmData
 	/// <summary>
 	/// Summary description for SHA1Hash.
 	/// </summary>
-	internal class SHA1Hash
+	public class SHA1Hash
 	{
-		public string sData="";
+		public static string sData="";
 
 		public SHA1Hash()
 		{
@@ -17,7 +17,7 @@ namespace PharmData
 			//
 		}
 	
-		public byte[] ComputeHash()
+		public static byte[] ComputeHash()
 		{
 			/*
 			 * This function is responsible for computing SHA1 hash. 			 
