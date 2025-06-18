@@ -6,21 +6,16 @@ namespace PrimePOSTestCases
     public class UnitTest1
     {
         [Fact]
-        public void Addition_ReturnsCorrectResult()
+        public void ProcessPaymentWithZeroAmount()
         {
-            int a = 5;
-            int b = 3;
-            int sum = a + b;
-
-            Assert.Equal(8, sum);
+            ProcessPayment(0, 100);
         }
 
         [Fact]
-        [Trait("Category", "Critical")]
-        public void StringContainsSubstring()
+        //[Trait("Category", "Critical")]
+        public void ProcessPaymentWithValidAmount()
         {
-            string message = "Welcome to PrimePOS System";
-            Assert.Contains("PrimePOS", message);
+            ProcessPayment(100, 200);
         }
 
         // This is the intentional failure test
@@ -30,6 +25,17 @@ namespace PrimePOSTestCases
             int expected = 100;
             int actual = 50;
             Assert.Equal(expected, actual);  // This will always fail
+        }
+
+        public bool ProcessPayment(decimal amount, decimal balance)
+        {
+            if (amount <= 0)
+                throw new ArgumentException("Amount must be greater than zero.");
+
+            if (balance >= amount)
+                return true;
+
+            return false;
         }
     }
 }
