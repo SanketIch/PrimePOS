@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: PrimePOS-build-output
-        path: ./src/PrimePOS/PrimePOS/bin/Release/
+        path: ./src/PrimePOS/
 
     - name: Install VSTest Console
       uses: darenm/Setup-VSTest@v1
@@ -77,7 +77,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: PrimePOS-build-output
-        path: ./build
+        path: ./src/PrimePOS/
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
