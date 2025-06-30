@@ -12,7 +12,6 @@ namespace PrimePOSTestCases
         }
 
         [Fact]
-        //[Trait("Category", "Critical")]
         public void ProcessPaymentWithValidAmount()
         {
             ProcessPayment(100, 200);
@@ -20,6 +19,7 @@ namespace PrimePOSTestCases
 
         // This is the intentional failure test
         [Fact]
+        [Trait("Category", "Critical")]
         public void IntentionalFailureTest()
         {
             int expected = 100;
