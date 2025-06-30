@@ -19,7 +19,7 @@ namespace PrimePOSTestCases
 
         // This is the intentional failure test
         [Fact]
-        [Trait("Category", "Critical")]
+        [CriticalTest]
         public void IntentionalFailureTest()
         {
             int expected = 100;
