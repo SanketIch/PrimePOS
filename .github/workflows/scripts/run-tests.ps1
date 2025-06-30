@@ -1,6 +1,11 @@
 # Find the test DLL
 $testDll = Get-ChildItem -Recurse -Filter "PrimePOSTestCases.dll" | Select-Object -First 1
 
+if (-not $testDll) {
+    Write-Error "❌ Test DLL not found!"
+    exit 1
+}
+
 # Create the results directory
 $resultsDir = "TestResults"
 mkdir $resultsDir -Force
@@ -10,41 +15,56 @@ vstest.console.exe "$($testDll.FullName)" /Logger:trx /ResultsDirectory:$results
 
 # Parse the .trx test result file
 $trxPath = Get-ChildItem -Path $resultsDir -Filter *.trx | Select-Object -First 1
+if (-not $trxPath) {
+    Write-Error "❌ .trx file not found after test execution!"
+    exit 1
+}
 $xml = [xml](Get-Content $trxPath.FullName)
+
+# Load the test assembly to get trait attributes via reflection
+$assembly = [System.Reflection.Assembly]::LoadFrom($testDll.FullName)
+
+# Build a map of method names to "IsCritical" flag using [Trait("Category", "Critical")]
+$criticalTestMap = @{}
+foreach ($type in $assembly.GetTypes()) {
+    foreach ($method in $type.GetMethods()) {
+        foreach ($attr in $method.GetCustomAttributes($false)) {
+            if ($attr.GetType().Name -eq "TraitAttribute") {
+                $nameProp = $attr.GetType().GetProperty("Name")
+                $valueProp = $attr.GetType().GetProperty("Value")
+                if ($nameProp -and $valueProp) {
+                    $name = $nameProp.GetValue($attr, $null)
+                    $value = $valueProp.GetValue($attr, $null)
+                    if ($name -eq "Category" -and $value -eq "Critical") {
+                        $criticalTestMap[$method.Name] = $true
+                    }
+                }
+            }
+        }
+    }
+}
 
 # Prepare CSV output
 $csvPath = "$resultsDir/TestResults.csv"
 $testResults = @()
 $criticalFailed = $false
-$failedCriticalTests = @()  # For logging failed critical tests
+$failedCriticalTests = @()
 
 foreach ($unitTestResult in $xml.TestRun.Results.UnitTestResult) {
-    $testId = $unitTestResult.testId
-    $testDefinition = $xml.TestRun.TestDefinitions.UnitTest | Where-Object { $_.id -eq $testId }
+    $testName = $unitTestResult.testName
+    $isCritical = $criticalTestMap.ContainsKey($testName)
 
-    # Extract Trait from Properties
-    $categories = @()
-    if ($testDefinition.Properties) {
-        foreach ($prop in $testDefinition.Properties.Property) {
-            if ($prop.Name -eq "Category" -and $prop.Value -eq "Critical") {
-                $categories += "Critical"
-            }
-        }
-    }
-
-    $isCritical = "Critical" -in $categories
-
-    Write-Host "Test Case: $($unitTestResult.testName)"
+    Write-Host "Test Case: $testName"
     Write-Host "IsCritical: $isCritical"
 
     if ($unitTestResult.outcome -eq "Failed" -and $isCritical) {
-        Write-Host "❌ Critical test failed: $($unitTestResult.testName)"
+        Write-Host "❌ Critical test failed: $testName"
         $criticalFailed = $true
-        $failedCriticalTests += $unitTestResult.testName
+        $failedCriticalTests += $testName
     }
 
     $testResults += [PSCustomObject]@{
-        TestName   = $unitTestResult.testName
+        TestName   = $testName
         Outcome    = $unitTestResult.outcome
         StartTime  = $unitTestResult.startTime
         EndTime    = $unitTestResult.endTime
@@ -55,7 +75,7 @@ foreach ($unitTestResult in $xml.TestRun.Results.UnitTestResult) {
 # Export results to CSV
 $testResults | Export-Csv -Path $csvPath -NoTypeInformation
 
-# Fail the pipeline only if a critical test failed
+# Fail the pipeline if any critical test failed
 if ($criticalFailed) {
     $failedTestNames = $failedCriticalTests -join ", "
     Write-Error "🚨 Critical test failure(s) detected: $failedTestNames. Failing workflow."
