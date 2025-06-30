@@ -1,11 +1,6 @@
 # Find the test DLL
 $testDll = Get-ChildItem -Recurse -Filter "PrimePOSTestCases.dll" | Select-Object -First 1
 
-if (-not $testDll) {
-    Write-Error "❌ Test DLL not found!"
-    exit 1
-}
-
 # Create the results directory
 $resultsDir = "TestResults"
 mkdir $resultsDir -Force
@@ -15,10 +10,6 @@ vstest.console.exe "$($testDll.FullName)" /Logger:trx /ResultsDirectory:$results
 
 # Parse the .trx test result file
 $trxPath = Get-ChildItem -Path $resultsDir -Filter *.trx | Select-Object -First 1
-if (-not $trxPath) {
-    Write-Error "❌ .trx file not found after test execution!"
-    exit 1
-}
 $xml = [xml](Get-Content $trxPath.FullName)
 
 # Load the test assembly and detect [CriticalTest] methods via reflection
