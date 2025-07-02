@@ -23,7 +23,7 @@ namespace PrimePOSTestCases
         public void IntentionalFailureTest()
         {
             int expected = 100;
-            int actual = 50;
+            int actual = 40;
             Assert.Equal(expected, actual);  // This will always fail
         }
 
