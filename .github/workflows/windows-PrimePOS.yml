@@ -1,4 +1,4 @@
-name: .NET Build and CodeQL Analysis
+name: .NET Build, Test Case Execution and Code Analysis
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     branches: [ "*" ]
 
 jobs:
-  test-execution:
-    name: Execute Tests
+  testcase-execution:
+    name: Build and Test Case Execution
     runs-on: windows-latest
 
     steps:
@@ -27,17 +27,11 @@ jobs:
     - name: Build solution
       run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
 
-    - name: Upload Build Output
-      uses: actions/upload-artifact@v4
-      with:
-        name: PrimePOS-build-output
-        path: ./src/PrimePOS/PrimePOS/bin/Release/
-
     - name: Install VSTest Console
       uses: darenm/Setup-VSTest@v1
 
     - name: Execute Tests via Script
-      run: pwsh .github/workflows/scripts/run-tests.ps1
+      run: pwsh .github/workflows/scripts/execute-testCases.ps1
 
     - name: Upload TRX Results
       uses: actions/upload-artifact@v4
@@ -51,10 +45,10 @@ jobs:
         name: TestResults_CSV
         path: TestResults/TestResults.csv
 
-  codeql-analysis:
-    name: CodeQL Analysis
+  code-analysis:
+    name: Code Analysis using CodeQL
     runs-on: windows-latest
-    needs: test-execution
+    needs: testcase-execution
     permissions:
       actions: read
       contents: read
@@ -73,18 +67,13 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore ./src/PrimePOS/PrimePOS.sln
 
-    - name: Download Build Output
-      uses: actions/download-artifact@v4
-      with:
-        name: PrimePOS-build-output
-        path: ./build
-
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: csharp
 
-    # No need to rebuild again; CodeQL can analyze downloaded binaries
+    - name: Build code
+      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
