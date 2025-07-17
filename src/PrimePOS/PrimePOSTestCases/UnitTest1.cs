@@ -12,6 +12,7 @@ namespace PrimePOSTestCases
         }
 
         [Fact]
+        [CriticalTest]
         public void ProcessPaymentWithValidAmount()
         {
             ProcessPayment(100, 200);
