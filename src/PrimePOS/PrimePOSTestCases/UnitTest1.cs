@@ -6,6 +6,7 @@ namespace PrimePOSTestCases
     public class UnitTest1
     {
         [Fact]
+        [CriticalTest]
         public void ProcessPaymentWithZeroAmount()
         {
             ProcessPayment(0, 100);
@@ -20,7 +21,7 @@ namespace PrimePOSTestCases
 
         // This is the intentional failure test
         [Fact]
-        //[CriticalTest]
+        [CriticalTest]
         public void IntentionalFailureTest()
         {
             int expected = 100;
