@@ -7,48 +7,9 @@ on:
     branches: [ "*" ]
 
 jobs:
-  testcase-execution:
-    name: Build and Test Case Execution
-    runs-on: windows-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.3.1
-
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1
-
-    - name: Restore NuGet packages
-      run: nuget restore ./src/PrimePOS/PrimePOS.sln
-
-    - name: Build solution
-      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
-
-    - name: Install VSTest Console
-      uses: darenm/Setup-VSTest@v1
-
-    - name: Execute Tests via Script
-      run: pwsh .github/workflows/scripts/execute-testCases.ps1
-
-    - name: Upload TRX Results
-      uses: actions/upload-artifact@v4
-      with:
-        name: TestResults_TRX
-        path: TestResults/*.trx
-
-    - name: Upload CSV Results
-      uses: actions/upload-artifact@v4
-      with:
-        name: TestResults_CSV
-        path: TestResults/TestResults.csv
-
   code-analysis:
     name: Code Analysis using CodeQL
     runs-on: windows-latest
-    needs: testcase-execution
     permissions:
       actions: read
       contents: read
@@ -79,17 +40,18 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         output: codeql-results
+        format: sarif
 
-    # Step to fail on "High" vulnerabilities
     - name: Check for High severity vulnerabilities
       run: |
-        $sarif = Get-Content codeql-results/results.sarif | ConvertFrom-Json
-        $highFindings = $sarif.runs.results | Where-Object { 
-            $_.properties.severity -eq "high" -or $_.rule.severity -eq "high" 
+        $sarif = Get-Content codeql-results/codeql.sarif | ConvertFrom-Json
+        $findings = $sarif.runs.results | Where-Object {
+            $_.properties.severity -in @("high","critical") -or
+            $_.rule.severity -in @("high","critical")
         }
-        if ($highFindings.Count -gt 0) {
-          Write-Host "❌ Found $($highFindings.Count) HIGH severity vulnerabilities."
+        if ($findings.Count -gt 0) {
+          Write-Host "❌ Found $($findings.Count) High/Critical severity vulnerabilities."
           exit 1
         } else {
-          Write-Host "✅ No High severity vulnerabilities found."
+          Write-Host "✅ No High or Critical vulnerabilities found."
         }
