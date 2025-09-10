@@ -1,0 +1,10 @@
+CREATE TABLE Orders (
+    OrderId INT IDENTITY(1,1) PRIMARY KEY,
+    UserId INT NOT NULL,
+    OrderDate DATETIME2 DEFAULT GETDATE(),
+    TotalAmount DECIMAL(10,2) NOT NULL,
+    Status NVARCHAR(50) DEFAULT 'PENDING',
+
+    CONSTRAINT FK_Orders_Users FOREIGN KEY (UserId)
+        REFERENCES Users(UserId)
+);
