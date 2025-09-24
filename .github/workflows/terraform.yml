@@ -1,0 +1,35 @@
+name: CD with Terraform (AWS RDS SQL Server)
+
+on:
+  push:
+    branches:
+      - main   # Deploy only when code is merged to main branch
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    name: Deploy AWS RDS SQL Server
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-east-1
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform -chdir=infra init
+
+      - name: Terraform Validate
+        run: terraform -chdir=infra validate
+
+      - name: Terraform Plan
+        run: terraform -chdir=infra plan -out=tfplan
+
+      - name: Terraform Apply
+        run: terraform -chdir=infra apply -auto-approve tfplan
