@@ -1,4 +1,4 @@
-name: Database Migration
+name: .NET Build, Test Case Execution and Code Analysis
 
 on:
   push:
@@ -7,19 +7,73 @@ on:
     branches: [ "*" ]
 
 jobs:
-  db-migration:
-    name: Database Migration using Flyway
+  testcase-execution:
+    name: Build and Test Case Execution
     runs-on: windows-latest
-  
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-  
-      - name: Run Flyway migrations
-        uses: flyway/flyway-action@v2
-        with:
-          url: jdbc:sqlserver://${{ secrets.DB_SERVER }};databaseName=testdb
-          user: ${{ secrets.DB_USER }}
-          password: ${{ secrets.DB_PASS }}
-          locations: filesystem:./db/migrations
-          command: migrate
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore ./src/PrimePOS/PrimePOS.sln
+
+    - name: Build solution
+      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
+
+    - name: Install VSTest Console
+      uses: darenm/Setup-VSTest@v1
+
+    - name: Execute Tests via Script
+      run: pwsh .github/workflows/scripts/execute-testCases.ps1
+
+    - name: Upload TRX Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: TestResults_TRX
+        path: TestResults/*.trx
+
+    - name: Upload CSV Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: TestResults_CSV
+        path: TestResults/TestResults.csv
+
+  code-analysis:
+    name: Code Analysis using CodeQL
+    runs-on: windows-latest
+    needs: testcase-execution
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1
+
+    - name: Restore NuGet packages
+      run: nuget restore ./src/PrimePOS/PrimePOS.sln
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: csharp
+
+    - name: Build code
+      run: msbuild ./src/PrimePOS/PrimePOS.sln /p:Configuration=Release
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
