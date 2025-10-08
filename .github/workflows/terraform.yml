@@ -4,9 +4,7 @@ on:
   workflow_dispatch:        # manual trigger from GitHub Actions tab
   push:
     branches:
-      - "*"                # or whichever branch triggers infra updates
-    paths:
-      - 'infrastructure/**' # only runs when Terraform files change
+      - "*"                
 
 jobs:
   terraform-deploy:
