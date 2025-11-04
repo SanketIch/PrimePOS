@@ -35,7 +35,8 @@ jobs:
       run: terraform validate
 
     - name: Terraform Plan
-      run: terraform plan -out=tfplan
+      run: terraform plan -out=tfplan -var "ec2_key_name=${{ secrets.AWS_KEY_PAIR_NAME }}"
 
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
+
