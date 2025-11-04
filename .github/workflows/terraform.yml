@@ -16,6 +16,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
       AWS_KEY_PAIR_NAME: ${{ secrets.AWS_KEY_PAIR_NAME }}
+      AWS_EC2_NAME: ${{ secrets.AWS_EC2_NAME }}
 
     defaults:
       run:
