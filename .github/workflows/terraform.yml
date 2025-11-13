@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - main
     paths:
       - '.iac/**.tf'
       - '.github/workflows/terraform.yml'
