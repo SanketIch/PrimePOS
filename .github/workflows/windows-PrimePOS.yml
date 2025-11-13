@@ -1,4 +1,4 @@
-name: .NET Build, Test Case Execution and Code Analysis
+name: .NET Build, Test Case Execution and Code Analysis using CodeQL
 
 on:
   push:
