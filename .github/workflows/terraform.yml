@@ -1,4 +1,4 @@
-name: 'Terraform AWS Infra'
+name: 'Terraform AWS Infrastructure'
 
 on:
   push:
