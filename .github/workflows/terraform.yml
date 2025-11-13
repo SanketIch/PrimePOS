@@ -92,10 +92,6 @@ jobs:
         run: |
           echo "Verifying AWS credentials..."
           aws sts get-caller-identity
-
-# 🧹 Temporary unlock step (Add this)
-      - name: Force unlock Terraform state (if locked)
-        run: terraform force-unlock -force 86c4bb89-54f7-9ee9-9142-5cb8d4b66511 || echo "No lock found, continuing..."
           
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
